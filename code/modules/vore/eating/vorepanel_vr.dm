@@ -826,7 +826,11 @@
 							if("Clear")
 								host.nutrition_messages[index] = ""
 							if("Edit")
+<<<<<<< HEAD
 								var/new_message = tgui_input_text(user, "Input a message", "Input", host.nutrition_messages[index], multiline = TRUE, prevent_enter = TRUE)
+=======
+								var/new_message = tgui_input_text(user, "Input a message", "Input", host.nutrition_messages[index], multiline = TRUE)
+>>>>>>> 1eee441c21 (Merge pull request #13101 from Heroman3003/editable-fat)
 								if(new_message)
 									host.nutrition_messages[index] = new_message
 
@@ -839,7 +843,11 @@
 							if("Clear")
 								host.weight_messages[index] = ""
 							if("Edit")
+<<<<<<< HEAD
 								var/new_message = tgui_input_text(user, "Input a message", "Input", host.weight_messages[index], multiline = TRUE, prevent_enter = TRUE)
+=======
+								var/new_message = tgui_input_text(user, "Input a message", "Input", host.weight_messages[index], multiline = TRUE)
+>>>>>>> 1eee441c21 (Merge pull request #13101 from Heroman3003/editable-fat)
 								if(new_message)
 									host.weight_messages[index] = new_message
 

@@ -271,9 +271,20 @@ const VoreSelectedBellyDescriptions = (props, context) => {
       </LabeledList.Item>
       <LabeledList.Item label="Examine Messages">
         <Button
+<<<<<<< HEAD
           onClick={() => act('set_attribute', { attribute: 'b_msgs', msgtype: 'en' })}
           content="Nutrition Examine Message"
         />
+=======
+          onClick={() => act("set_attribute", { attribute: "b_msgs", msgtype: "en" })}
+          content="Nutrition Examine Message" />
+        <Button
+          onClick={() => act("set_attribute", { attribute: "b_msgs", msgtype: "ew" })}
+          content="Weight Examine Message" />
+        <Button
+          onClick={() => act("set_attribute", { attribute: "b_msgs", msgtype: "em" })}
+          content="Examine Message (when full)" />
+>>>>>>> 1eee441c21 (Merge pull request #13101 from Heroman3003/editable-fat)
         <Button
           onClick={() => act('set_attribute', { attribute: 'b_msgs', msgtype: 'ew' })}
           content="Weight Examine Message"
@@ -535,6 +546,20 @@ const VoreSelectedBellyOptions = (props, context) => {
               selected={weight_ex}
               content={weight_ex ? 'Active' : 'Inactive'}
             />
+          </LabeledList.Item>
+          <LabeledList.Item label="Examine Nutrition Messages">
+            <Button
+              onClick={() => act("set_attribute", { attribute: "toggle_nutrition_ex" })}
+              icon={nutrition_ex ? "toggle-on" : "toggle-off"}
+              selected={nutrition_ex}
+              content={nutrition_ex ? "Active" : "Inactive"} />
+          </LabeledList.Item>
+          <LabeledList.Item label="Examine Weight Messages">
+            <Button
+              onClick={() => act("set_attribute", { attribute: "toggle_weight_ex" })}
+              icon={weight_ex ? "toggle-on" : "toggle-off"}
+              selected={weight_ex}
+              content={weight_ex ? "Active" : "Inactive"} />
           </LabeledList.Item>
         </LabeledList>
       </Flex.Item>
