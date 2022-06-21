@@ -982,6 +982,7 @@ This is the proc mobs get to turn into a ghost. Forked from ghostize due to comp
 	set category = "Ghost"
 	set name = "Blank pAI alert"
 	set desc = "Flash an indicator light on available blank pAI devices for a smidgen of hope."
+<<<<<<< HEAD
 
 	var/time_till_respawn = time_till_respawn()
 	if(time_till_respawn == -1) // Special case, never allowed to respawn
@@ -990,6 +991,9 @@ This is the proc mobs get to turn into a ghost. Forked from ghostize due to comp
 		to_chat(usr, "<span class='warning'>You can't do that yet! You died too recently. You need to wait another [round(time_till_respawn/10/60, 0.1)] minutes.</span>")
 		return
 
+=======
+	
+>>>>>>> fede7d1ec7 (Merge pull request #13136 from Very-Soft/paiqol)
 	if(jobban_isbanned(usr, "pAI"))
 		to_chat(usr,"<span class='warning'>You cannot alert pAI cards when you are banned from playing as a pAI.</span>")
 		return

@@ -71,10 +71,16 @@ GLOBAL_LIST_BOILERPLATE(all_pai_cards, /obj/item/device/paicard)
 		to_chat(usr,"<span class='warning'>You cannot join a pAI card when you are banned from playing as a pAI.</span>")
 		return
 
+<<<<<<< HEAD
 	for(var/ourkey in paikeys)
 		if(ourkey == user.ckey)
 			to_chat(usr, "<span class='warning'>You can't just rejoin any old pAI card!!! Your card still exists.</span>")
 			return
+=======
+	if(jobban_isbanned(usr, "pAI"))
+		to_chat(usr,"<span class='warning'>You cannot join a pAI card when you are banned from playing as a pAI.</span>")
+		return
+>>>>>>> fede7d1ec7 (Merge pull request #13136 from Very-Soft/paiqol)
 
 	var/choice = tgui_alert(user, "You sure you want to inhabit this PAI, or submit yourself to being recruited?", "Confirmation", list("Inhabit", "Recruit", "Cancel"))
 	if(choice == "Cancel")

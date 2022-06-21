@@ -453,16 +453,25 @@
 			M.drop_from_inventory(H)
 		H.loc = get_turf(src)
 		src.loc = get_turf(H)
+<<<<<<< HEAD
 
+=======
+	
+>>>>>>> fede7d1ec7 (Merge pull request #13136 from Very-Soft/paiqol)
 	if(isbelly(loc))	//If in tumby, when fold up, card go into tumby
 		var/obj/belly/B = loc
 		src.forceMove(card)
 		card.forceMove(B)
 	else				//Otherwise go on floor
+<<<<<<< HEAD
 		src.loc = card
 		card.loc = get_turf(card)
 		src.forceMove(card)
 		card.forceMove(card.loc)
+=======
+		src.forceMove(card)
+		card.forceMove(get_turf(card))
+>>>>>>> fede7d1ec7 (Merge pull request #13136 from Very-Soft/paiqol)
 	canmove = 1
 	resting = 0
 	icon_state = "[chassis]"
