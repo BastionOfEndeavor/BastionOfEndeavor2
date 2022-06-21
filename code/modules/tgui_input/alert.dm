@@ -31,7 +31,11 @@
 	//	return tgui_input_list(user, message, title, buttons, timeout, autofocus)
 
 	// Client does NOT have tgui_input on: Returns regular input
+<<<<<<< HEAD
 	if(!user.client.prefs.tgui_input_mode || strict_byond)
+=======
+	if(!usr.client.prefs.tgui_input_mode || strict_byond)
+>>>>>>> 9f14866f07 (Merge pull request #13135 from ItsSelis/tgui-input-framework-hotfix)
 		if(length(buttons) == 2)
 			return alert(user, message, title, buttons[1], buttons[2])
 		if(length(buttons) == 3)

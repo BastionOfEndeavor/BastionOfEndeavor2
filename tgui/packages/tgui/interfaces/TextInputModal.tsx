@@ -17,8 +17,26 @@ type TextInputData = {
 
 export const TextInputModal = (props, context) => {
   const { act, data } = useBackend<TextInputData>(context);
+<<<<<<< HEAD
   const { large_buttons, max_length, message = '', multiline, placeholder, timeout, title, prevent_enter } = data;
   const [input, setInput] = useLocalState<string>(context, 'input', placeholder || '');
+=======
+  const {
+    large_buttons,
+    max_length,
+    message = "",
+    multiline,
+    placeholder,
+    timeout,
+    title,
+    prevent_enter,
+  } = data;
+  const [input, setInput] = useLocalState<string>(
+    context,
+    'input',
+    placeholder || ''
+  );
+>>>>>>> 9f14866f07 (Merge pull request #13135 from ItsSelis/tgui-input-framework-hotfix)
   const onType = (value: string) => {
     if (value === input) {
       return;
