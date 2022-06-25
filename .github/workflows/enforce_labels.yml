@@ -6,6 +6,10 @@ jobs:
   enforce-label:
     runs-on: ubuntu-latest
     steps:
+<<<<<<< HEAD
     - uses: yogevbd/enforce-label-action@2.2.2
+=======
+    - uses: yogevbd/enforce-label-action@2.1.0
+>>>>>>> 27374124c4 (Merge pull request #13164 from ItsSelis/tgui-prettierx)
       with:
         BANNED_LABELS: "Input: Staff,Input: Author,Needs Announcement,Needs Changelog,Needs Documentation,Stale"

@@ -58,10 +58,13 @@ function task-prettier {
   yarn tgui:prettier @Args
 }
 
+<<<<<<< HEAD
 function task-prettify {
   yarn prettierx --write packages @Args
 }
 
+=======
+>>>>>>> 27374124c4 (Merge pull request #13164 from ItsSelis/tgui-prettierx)
 ## Run a linter through all packages
 function task-lint {
   yarn run tsc
