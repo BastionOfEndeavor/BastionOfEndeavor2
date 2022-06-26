@@ -183,6 +183,7 @@
 	name = "Linguist"
 	desc = "Allows you to have more languages."
 	cost = 1
+<<<<<<< HEAD
 	var_changes = list("num_alternate_languages" = 6)
 	var_changes_pref = list("extra_languages" = 3)
 	custom_only = FALSE
@@ -195,3 +196,14 @@
 	var_changes = list("gun_accuracy_mod" = 25)
 	custom_only = FALSE
 	varchange_type = TRAIT_VARCHANGE_MORE_BETTER
+=======
+	var_changes = list("num_alternate_languages" = 5)
+	var_changes_pref = list("extra_languages" = 2)
+
+/datum/trait/positive/polyglot
+	name = "Polyglot"
+	desc = "Allows you to have a lot more languages."
+	cost = 2
+	var_changes = list("num_alternate_languages" = 7)
+	var_changes_pref = list("extra_languages" = 4)
+>>>>>>> a6f7e932ad (Merge pull request #13178 from Heroman3003/linguist)
