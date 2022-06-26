@@ -184,6 +184,7 @@
 	desc = "Allows you to have more languages."
 	cost = 1
 	var_changes = list("num_alternate_languages" = 6)
+<<<<<<< HEAD
 	var_changes_pref = list("extra_languages" = 3)
 	custom_only = FALSE
 	varchange_type = TRAIT_VARCHANGE_MORE_BETTER
@@ -195,3 +196,6 @@
 	var_changes = list("gun_accuracy_mod" = 25)
 	custom_only = FALSE
 	varchange_type = TRAIT_VARCHANGE_MORE_BETTER
+=======
+	var_changes_pref = list("extra_languages" = 3)
+>>>>>>> 6b4d5fcf7b (Merge pull request #13183 from Heroman3003/linguist)
