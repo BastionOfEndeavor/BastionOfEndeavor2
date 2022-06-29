@@ -22,6 +22,7 @@ cfg/
 !/.vscode/settings.json
 !/.vscode/tasks.json
 
+tools/ru-merge-upstream-pull-request.sh
 code/game/gamemodes/technomancer/spells/projectile/overload.dm
 code/game/gamemodes/technomancer/spells/projectile/overload.dm
 code/modules/client/preference_setup/loadout/loadout_xeno.dm
