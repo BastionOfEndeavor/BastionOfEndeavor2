@@ -143,9 +143,15 @@
 			pcard.damage_random_component()
 			update_icon()
 		else if(pcard.pai.bruteloss)
+<<<<<<< HEAD
 			pcard.pai.adjustBruteLoss(-5)
 		else if(pcard.pai.fireloss)
 			pcard.pai.adjustFireLoss(-5)
+=======
+			pcard.pai.adjustBruteLoss(-1)
+		else if(pcard.pai.fireloss)
+			pcard.pai.adjustFireLoss(-1)
+>>>>>>> e1dca305a0 (Merge pull request #13180 from Very-Soft/paideath)
 		else
 			charging = null
 			update_icon()
