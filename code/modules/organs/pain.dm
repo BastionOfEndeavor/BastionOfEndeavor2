@@ -84,13 +84,25 @@
 		var/msg
 		switch(maxdam)
 			if(1 to 10)
+				/* Bastion of Endeavor Translation
 				msg =  "Your [damaged_organ.name] [burning ? "burns" : "hurts"]."
+				*/
+				msg =  "Вы чувствуете [burning ? "жжение" : "боль"] [prep_ru(damaged_organ, "в")] [pcase_ru(damaged_organ)]."
+				// End of Bastion of Endeavor Translation
 			if(11 to 90)
 				flash_weak_pain()
+				/* Bastion of Endeavor Translation
 				msg = "<font size=2>Your [damaged_organ.name] [burning ? "burns" : "hurts"] badly!</font>"
+				*/
+				msg = "<font size=2>Вы чувствуете [burning ? "ужасное жжение" : "ужасную боль"] [prep_ru(damaged_organ, "в")] [pcase_ru(damaged_organ)]!</font>"
+				// End of Bastion of Endeavor Translation
 			if(91 to 10000)
 				flash_pain()
+				/* Bastion of Endeavor Translation
 				msg = "<font size=3>OH GOD! Your [damaged_organ.name] is [burning ? "on fire" : "hurting terribly"]!</font>"
+				*/
+				msg = "<font size=3>О БОЖЕ! [concat_ru("Ваш;;а;е;и;", damaged_organ)] [burning ? "[verb_ru(damaged_organ, "гор;ит;ит;ит;ят;")]" : "[verb_ru(damaged_organ, "невыносимо бол;ит;ит;ит;ят;")]"]!</font>"
+				// End of Bastion of Endeavor Translation
 		custom_pain(msg, maxdam, prob(10))
 
 	// Damage to internal organs hurts a lot.
@@ -98,15 +110,35 @@
 		if((I.status & ORGAN_DEAD) || I.robotic >= ORGAN_ROBOT) continue
 		if(I.damage > 2) if(prob(2))
 			var/obj/item/organ/external/parent = get_organ(I.parent_organ)
+			/* Bastion of Endeavor Translation
 			src.custom_pain("You feel a sharp pain in your [parent.name]", 50)
+			*/
+			src.custom_pain("Вы чувствуете острую боль [prep_ru(damaged_organ, "в")] [pcase_ru(parent)]", 50)
+			// End of Bastion of Endeavor Translation
 
 	if(prob(2))
 		switch(getToxLoss())
 			if(1 to 10)
+				/* Bastion of Endeavor Translation
 				custom_pain("Your body stings slightly.", getToxLoss())
+				*/
+				custom_pain("Ваше тело слегка покалывает.", getToxLoss())
+				// End of Bastion of Endeavor Translation
 			if(11 to 30)
+				/* Bastion of Endeavor Translation
 				custom_pain("Your body hurts a little.", getToxLoss())
+				*/
+				custom_pain("Ваше тело слегка побаливает.", getToxLoss())
+				// End of Bastion of Endeavor Translation
 			if(31 to 60)
+				/* Bastion of Endeavor Translation
 				custom_pain("Your whole body hurts badly.", getToxLoss())
+				*/
+				custom_pain("Всё ваше тело ужасно болит.", getToxLoss())
+				// End of Bastion of Endeavor Translation
 			if(61 to INFINITY)
+				/* Bastion of Endeavor Translation
 				custom_pain("Your body aches all over, it's driving you mad.", getToxLoss())
+				*/
+				custom_pain("Всё ваше тело стонет, вы сходите с ума от боли.", getToxLoss())
+				// End of Bastion of Endeavor Translation

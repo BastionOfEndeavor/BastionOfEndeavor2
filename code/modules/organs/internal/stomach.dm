@@ -28,7 +28,11 @@
 				reagents.trans_to(L, 2, 2, 0)
 
 		if(is_broken() && prob(1))
+			/* Bastion of Endeavor Translation
 			owner.custom_pain("There's a twisting pain in your abdomen!",1)
+			*/
+			owner.custom_pain("Вы чувствуете скручивающую боль в своём животе!",1)
+			// End of Bastion of Endeavor Translation
 			owner.vomit(FALSE, TRUE)
 
 /obj/item/organ/internal/stomach/handle_germ_effects()
@@ -38,7 +42,11 @@
 	//Bacterial Gastroenteritis
 	if (. >= 1)
 		if(prob(1))
+			/* Bastion of Endeavor Translation
 			owner.custom_pain("There's a twisting pain in your abdomen!",1)
+			*/
+			owner.custom_pain("Вы чувствуете скручивающую боль в своём животе!",1)
+			// End of Bastion of Endeavor Translation
 			owner.apply_effect(2, AGONY, 0)
 	if (. >= 2)
 		if(prob(1) && owner.getToxLoss() < owner.getMaxHealth()*0.2)

@@ -50,7 +50,11 @@
 	//Pyogenic Abscess
 	if (. >= 1)
 		if(prob(1))
+			/* Bastion of Endeavor Translation
 			owner.custom_pain("There's a sharp pain in your upper-right abdomen!",1)
+			*/
+			owner.custom_pain("Вы чувствуете острую боль в правой верхней части живота!",1)
+			// End of Bastion of Endeavor Translation
 	if (. >= 2)
 		if(prob(1) && owner.getToxLoss() < owner.getMaxHealth()*0.3)
 			//to_chat(owner, "") //Toxins provide their own messages for pain

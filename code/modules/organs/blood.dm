@@ -119,11 +119,21 @@ var/const/CE_STABLE_THRESHOLD = 0.5
 			if(!pale)
 				pale = 1
 				update_icons_body()
+				/* Bastion of Endeavor Translation: making things neater
 				var/word = pick("dizzy","woozy","faint","disoriented","unsteady")
 				to_chat(src, span_red("You feel slightly [word]"))
+				*/
+				var/word = pick("У вас слегка кружится голова","У вас слегка плывёт в глазах","Вы чувствуете недомогание","Вы слегка дезориентированы","Вы слегка пошатываетесь")
+				to_chat(src, span_red("[word]."))
+				// End of Bastion of Endeavor Translation
 			if(prob(1))
+				/* Bastion of Endeavor Translation: making things neater
 				var/word = pick("dizzy","woozy","faint","disoriented","unsteady")
 				to_chat(src, span_red("You feel [word]"))
+				*/
+				var/word = pick("У вас кружится голова","У вас плывёт в глазах","Вы чувствуете недомогание","Вы дезориентированы","Вы шатаетесь")
+				to_chat(src, span_red("[word]."))
+				// End of Bastion of Endeavor Translation
 			if(getOxyLoss() < 20 * threshold_coef)
 				adjustOxyLoss(3 * dmg_coef)
 		else if(blood_volume_raw >= species.blood_volume*species.blood_level_danger)
@@ -136,14 +146,24 @@ var/const/CE_STABLE_THRESHOLD = 0.5
 			adjustOxyLoss(1 * dmg_coef)
 			if(prob(15))
 				Paralyse(rand(1,3))
+				/* Bastion of Endeavor Translation
 				var/word = pick("dizzy","woozy","faint","disoriented","unsteady")
 				to_chat(src, span_red("You feel dangerously [word]"))
+				*/
+				var/word = pick("У вас сильно кружится голова","У вас сильно плывёт в глазах","Вы чувствуете сильное недомогание","Вы сильно дезориентированы","Вы сильно шатаетесь")
+				to_chat(src, span_red("[word]."))
+				// End of Bastion of Endeavor Translation
 		else if(blood_volume_raw >= species.blood_volume*species.blood_level_fatal)
 			adjustOxyLoss(5 * dmg_coef)
 //			adjustToxLoss(3 * dmg_coef)
 			if(prob(15))
+				/* Bastion of Endeavor Translation
 				var/word = pick("dizzy","woozy","faint","disoriented","unsteady")
 				to_chat(src, span_red("You feel extremely [word]"))
+				*/
+				var/word = pick("У вас очень сильно кружится голова","У вас очень сильно плывёт в глазах","Вы чувствуете очень сильное недомогание","Вы очень сильно дезориентированы","Вы очень сильно шатаетесь")
+				to_chat(src, span_red("[word]."))
+				// End of Bastion of Endeavor Translation
 		else //Not enough blood to survive (usually)
 			if(!pale)
 				pale = 1
@@ -306,13 +326,21 @@ var/const/CE_STABLE_THRESHOLD = 0.5
 	if (!injected)
 		return
 	if(!our)
+		/* Bastion of Endeavor Translation
 		log_debug("[src] has no blood reagent, proceeding with fallback reinitialization.")
+		*/
+		log_debug("[interact_ru(src, "не име;ет;ет;ет;ют;")] крови, откатываемся на реинициализацию.")
+		// End of Bastion of Endeavor Translation
 		var/vessel_old = vessel
 		vessel = null
 		qdel(vessel_old)
 		make_blood(amount)
 		if(!vessel)
+			/* Bastion of Endeavor Translation
 			log_debug("Failed to re-initialize blood datums on [src]!")
+			*/
+			log_debug("Не удалось реинициализировать датум крови [gcase_ru(src)]!")
+			// End of Bastion of Endeavor Translation
 			return
 		if(vessel.total_volume < species.blood_volume)
 			vessel.add_reagent("blood", species.blood_volume - vessel.total_volume)
@@ -321,7 +349,11 @@ var/const/CE_STABLE_THRESHOLD = 0.5
 		fixblood()
 		our = get_blood(vessel)
 		if(!our)
+			/* Bastion of Endeavor Translation
 			log_debug("Failed to re-initialize blood datums on [src]!")
+			*/
+			log_debug("Не удалось реинициализировать датум крови [gcase_ru(src)]!")
+			// End of Bastion of Endeavor Translation
 			return
 
 

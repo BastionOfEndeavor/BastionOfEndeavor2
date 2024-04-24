@@ -47,7 +47,11 @@
 	// Low levels can cause pain and haemophilia, high levels can cause brain infections.
 	if (. >= 1)
 		if(prob(1))
+			/* Bastion of Endeavor Translation
 			owner.custom_pain("There's a sharp pain in your [owner.get_organ(parent_organ)]!",1)
+			*/
+			owner.custom_pain("Вы чувствуете острую боль в [concat_ru("сво;ём;ей;ём;их;", owner.get_organ(parent_organ), PCASE)]!",1)
+			// End of Bastion of Endeavor Translation
 			owner.add_modifier(/datum/modifier/trait/haemophilia, 2 MINUTES * spleen_efficiency)
 	if (. >= 2)
 		if(prob(1))

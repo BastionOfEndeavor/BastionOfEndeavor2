@@ -34,10 +34,18 @@
 	//Pyelonephritis
 	if (. >= 1)
 		if(prob(1))
+			/* Bastion of Endeavor Translation
 			owner.custom_pain("There's a stabbing pain in your lower back!",1)
+			*/
+			owner.custom_pain("Вы чувствуете острую боль в нижней части спины!",1)
+			// End of Bastion of Endeavor Translation
 	if (. >= 2)
 		if(prob(1))
+			/* Bastion of Endeavor Translation
 			owner.custom_pain("You feel extremely tired, like you can't move!",1)
+			*/
+			owner.custom_pain("Вы резко устали и с трудом шевелитесь!",1)
+			// End of Bastion of Endeavor Translation
 			owner.m_intent = "walk"
 			owner.hud_used.move_intent.icon_state = "walking"
 

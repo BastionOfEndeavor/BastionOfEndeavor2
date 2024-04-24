@@ -21,17 +21,30 @@
 	integrated_object_type = /obj/item/weapon/gun/energy/laser/mounted/augment
 
 /obj/item/organ/internal/augment/armmounted/attackby(obj/item/I as obj, mob/user as mob)
+	// Bastion of Endeavor Addition: This is lazy but whatever, I haven't the slightest idea what this is supposed to even mean and nobody is gonna see this anyway
+	var/parent_organ_ru
+	// End of Bastion of Endeavor Addition
 	if(I.has_tool_quality(TOOL_SCREWDRIVER))
 		switch(organ_tag)
 			if(O_AUG_L_FOREARM)
 				organ_tag = O_AUG_R_FOREARM
 				parent_organ = BP_R_ARM
 				target_slot = slot_r_hand
+				// Bastion of Endeavor Addition
+				parent_organ_ru = "правую руку"
+				// End of Bastion of Endeavor Addition
 			if(O_AUG_R_FOREARM)
 				organ_tag = O_AUG_L_FOREARM
 				parent_organ = BP_L_ARM
 				target_slot = slot_l_hand
+				// Bastion of Endeavor Addition
+				parent_organ_ru = "левую руку"
+				// End of Bastion of Endeavor Addition
+		/* Bastion of Endeavor Translation
 		to_chat(user, "<span class='notice'>You swap \the [src]'s servos to install neatly into \the lower [parent_organ] mount.</span>")
+		*/
+		to_chat(user, "<span class='notice'>Вы переключили cервоприводы [gcase_ru(src)] в режим установки в [parent_organ_ru].</span>")
+		// End of Bastion of Endeavor Translation
 		return
 
 	. = ..()
@@ -66,17 +79,30 @@
 	integrated_object_type = /obj/item/weapon/portable_scanner
 
 /obj/item/organ/internal/augment/armmounted/hand/attackby(obj/item/I as obj, mob/user as mob)
+	// Bastion of Endeavor Addition: This is lazy but whatever, I haven't the slightest idea what this is supposed to even mean and nobody is gonna see this anyway
+	var/parent_organ_ru
+	// End of Bastion of Endeavor Addition
 	if(I.has_tool_quality(TOOL_SCREWDRIVER))
 		switch(organ_tag)
 			if(O_AUG_L_HAND)
 				organ_tag = O_AUG_R_HAND
 				parent_organ = BP_R_HAND
+				// Bastion of Endeavor Addition
+				parent_organ_ru = "правую ладонь"
+				// End of Bastion of Endeavor Addition
 				target_slot = slot_r_hand
 			if(O_AUG_R_HAND)
 				organ_tag = O_AUG_L_HAND
 				parent_organ = BP_L_HAND
+				// Bastion of Endeavor Addition
+				parent_organ_ru = "левую ладонь"
+				// End of Bastion of Endeavor Addition
 				target_slot = slot_l_hand
+		/* Bastion of Endeavor Translation
 		to_chat(user, "<span class='notice'>You swap \the [src]'s servos to install neatly into \the upper [parent_organ] mount.</span>")
+		*/
+		to_chat(user, "<span class='notice'>Вы переключили cервоприводы [gcase_ru(src)] в режим установки в [parent_organ_ru].</span>")
+		// End of Bastion of Endeavor Translation
 		return
 
 	. = ..()
@@ -110,17 +136,30 @@
 	integrated_object_type = null
 
 /obj/item/organ/internal/augment/armmounted/shoulder/attackby(obj/item/I as obj, mob/user as mob)
+	// Bastion of Endeavor Addition: This is lazy but whatever, I haven't the slightest idea what this is supposed to even mean and nobody is gonna see this anyway
+	var/parent_organ_ru
+	// End of Bastion of Endeavor Addition
 	if(I.has_tool_quality(TOOL_SCREWDRIVER))
 		switch(organ_tag)
 			if(O_AUG_L_UPPERARM)
 				organ_tag = O_AUG_R_UPPERARM
 				parent_organ = BP_R_ARM
 				target_slot = slot_r_hand
+				// Bastion of Endeavor Addition
+				parent_organ_ru = "правую руку"
+				// End of Bastion of Endeavor Addition
 			if(O_AUG_R_UPPERARM)
 				organ_tag = O_AUG_L_UPPERARM
 				parent_organ = BP_L_ARM
 				target_slot = slot_l_hand
+				// Bastion of Endeavor Addition
+				parent_organ_ru = "левую руку"
+				// End of Bastion of Endeavor Addition
+		/* Bastion of Endeavor Translation
 		to_chat(user, "<span class='notice'>You swap \the [src]'s servos to install neatly into \the upper [parent_organ] mount.</span>")
+		*/
+		to_chat(user, "<span class='notice'>Вы переключили cервоприводы [gcase_ru(src)] в режим установки в [parent_organ_ru].</span>")
+		// End of Bastion of Endeavor Translation
 		return
 
 	. = ..()
@@ -213,7 +252,12 @@
 			I.canremove = FALSE
 			I.toolspeed = toolspeed
 			I.my_augment = src
+			/* Bastion of Endeavor Translation
 			I.name = "integrated [I.name]"
+			*/
+			I.name = "[verb_ru(src, "Вживлённ;ый;ая;ое;ые;")] [ncase_ru(I)]"
+			I.update_blueprint_ru(left = "вживлённ;adj1*a/b(2)", separator_left = " ")
+			// End of Bastion of Endeavor Translation
 
 		for(var/tool in integrated_tools)
 			var/obj/item/Tool = integrated_tools[tool]

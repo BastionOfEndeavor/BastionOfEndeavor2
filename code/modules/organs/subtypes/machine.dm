@@ -11,12 +11,26 @@
 	robotize()
 	..()
 
+//Bastion of Endeavor Addition: I don't know why it robotizes itself twice when printed nor care to find out. Here's some snowflake treatment
+/obj/item/organ/internal/cell/robotize()
+	..()
+	name = "Механический микроаккумулятор"
+	desc = "Крохотный, но очень мощный аккумулятор, используемый в простетических телах."
+	case_blueprint_ru[1] = "муж#механическ;adj3aX~ микроаккумулятор;n1a"
+	// i hate this
+	construct_cases_ru()
+// End of Bastion of Endeavor Addition
+
 /obj/item/organ/internal/cell/replaced()
 	..()
 	// This is very ghetto way of rebooting an IPC. TODO better way.
 	if(owner && owner.stat == DEAD)
 		owner.set_stat(CONSCIOUS)
+		/* Bastion of Endeavor Translation
 		owner.visible_message("<span class='danger'>\The [owner] twitches visibly!</span>")
+		*/
+		owner.visible_message("<span class='danger'>[interact_ru(owner, "резко вздрогнул")]!</span>")
+		// End of Bastion of Endeavor Translation
 
 /obj/item/organ/internal/cell/emp_act(severity)
 	..()
@@ -66,6 +80,7 @@
 
 /obj/item/organ/internal/mmi_holder/proc/update_from_mmi()
 
+	// Bastion of Endeavor TODO (MOB Realname): Yeah I ain't touching this yet
 	if(!stored_mmi.brainmob)
 		stored_mmi.brainmob = new(stored_mmi)
 		stored_mmi.brainobj = new(stored_mmi)
@@ -89,7 +104,11 @@
 		owner.set_stat(CONSCIOUS)
 		dead_mob_list -= owner
 		living_mob_list |= owner
+		/* Bastion of Endeavor Translation
 		owner.visible_message("<span class='danger'>\The [owner] twitches visibly!</span>")
+		*/
+		owner.visible_message("<span class='danger'>[interact_ru(owner, "резко вздрогнул")]!</span>")
+		// End of Bastion of Endeavor Translation
 
 /obj/item/organ/internal/mmi_holder/removed(var/mob/living/user)
 

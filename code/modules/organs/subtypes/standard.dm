@@ -36,7 +36,11 @@
 
 		var/datum/robolimb/R = all_robolimbs[model] // company should be set in parent by now
 		if(!R)
+			/* Bastion of Endeavor Translation
 			log_error("A torso was robotize() but has no model that can be found: [model]. May affect FBPs.")
+			*/
+			log_error("Вызван robotize() на торсе, но не найдена модель: [model]. Может повлиять на ПВТ.")
+			// End of Bastion of Endeavor Translation
 		owner.synthetic = R
 	return FALSE
 
@@ -48,11 +52,19 @@
 	//Staph infection symptoms for CHEST
 	if (. >= 1)
 		if(prob(.))
+			/* Bastion of Endeavor Translation
 			owner.custom_pain("Your [name] [pick("aches","itches","throbs")]!",0)
+			*/
+			owner.custom_pain("[concat_ru("Ваш;;а;е;и;", src)] [verb_ru(src, pick("чеш;ется;ется;ется;утся","бол;ит;ит;ит;ят;","зуд;ит;ит;ит;ят;"))]!",0)
+			// End of Bastion of Endeavor Translation
 
 	if (. >= 2)
 		if(prob(.))
+			/* Bastion of Endeavor Translation
 			owner.custom_pain("A jolt of pain surges through your [name]!",1)
+			*/
+			owner.custom_pain("Вы почувствовали резкий приток боли в [verb_ru("сво;ём;ей;ём;их;")] [pcase_ru(name)]!",1)
+			// End of Bastion of Endeavor Translation
 
 /obj/item/organ/external/groin
 	name = "lower body"
@@ -78,11 +90,19 @@
 	//Staph infection symptoms for GROIN
 	if (. >= 1)
 		if(prob(.))
+			/* Bastion of Endeavor Translation
 			owner.custom_pain("Your [name] [pick("aches","itches","throbs")]!",0)
+			*/
+			owner.custom_pain("[concat_ru("Ваш;;а;е;и;", src)] [verb_ru(src, pick("чеш;ется;ется;ется;утся","бол;ит;ит;ит;ят;","зуд;ит;ит;ит;ят;"))]!",0)
+			// End of Bastion of Endeavor Translation
 
 	if (. >= 2)
 		if(prob(.))
+			/* Bastion of Endeavor Translation
 			owner.custom_pain("A jolt of pain surges through your [name]!",1)
+			*/
+			owner.custom_pain("Вы почувствовали резкий приток боли в [verb_ru("сво;ём;ей;ём;их;")] [pcase_ru(name)]!",1)
+			// End of Bastion of Endeavor Translation
 
 /obj/item/organ/external/arm
 	organ_tag = BP_L_ARM
@@ -106,11 +126,19 @@
 	//Staph infection symptoms for ARM
 	if (. >= 1)
 		if(prob(.))
+			/* Bastion of Endeavor Translation
 			owner.custom_pain("Your [name] [pick("aches","itches","throbs")]!",0)
+			*/
+			owner.custom_pain("[concat_ru("Ваш;;а;е;и;", src)] [verb_ru(src, pick("чеш;ется;ется;ется;утся","бол;ит;ит;ит;ят;","зуд;ит;ит;ит;ят;"))]!",0)
+			// End of Bastion of Endeavor Translation
 
 	if (. >= 2)
 		if(prob(.))
+			/* Bastion of Endeavor Translation
 			owner.custom_pain("A jolt of pain surges through your [name]!",1)
+			*/
+			owner.custom_pain("Вы почувствовали резкий приток боли в [verb_ru("сво;ём;ей;ём;их;")] [pcase_ru(name)]!",1)
+			// End of Bastion of Endeavor Translation
 			if(organ_tag == BP_L_ARM) //Specific level 2 'feature
 				owner.drop_l_hand()
 			else if(organ_tag == BP_R_ARM)
@@ -147,11 +175,19 @@
 	//Staph infection symptoms for LEG
 	if (. >= 1)
 		if(prob(.))
+			/* Bastion of Endeavor Translation
 			owner.custom_pain("Your [name] [pick("aches","itches","throbs")]!",0)
+			*/
+			owner.custom_pain("[concat_ru("Ваш;;а;е;и;", src)] [verb_ru(src, pick("чеш;ется;ется;ется;утся","бол;ит;ит;ит;ят;","зуд;ит;ит;ит;ят;"))]!",0)
+			// End of Bastion of Endeavor Translation
 
 	if (. >= 2)
 		if(prob(.))
+			/* Bastion of Endeavor Translation
 			owner.custom_pain("A jolt of pain surges through your [name]!",1)
+			*/
+			owner.custom_pain("Вы почувствовали резкий приток боли в [verb_ru("сво;ём;ей;ём;их;")] [pcase_ru(name)]!",1)
+			// End of Bastion of Endeavor Translation
 			owner.Weaken(5)
 
 /obj/item/organ/external/leg/right
@@ -191,11 +227,19 @@
 	//Staph infection symptoms for FOOT
 	if (. >= 1)
 		if(prob(.))
+			/* Bastion of Endeavor Translation
 			owner.custom_pain("Your [name] [pick("aches","itches","throbs")]!",0)
+			*/
+			owner.custom_pain("[concat_ru("Ваш;;а;е;и;", src)] [verb_ru(src, pick("чеш;ется;ется;ется;утся","бол;ит;ит;ит;ят;","зуд;ит;ит;ит;ят;"))]!",0)
+			// End of Bastion of Endeavor Translation
 
 	if (. >= 2)
 		if(prob(.))
+			/* Bastion of Endeavor Translation
 			owner.custom_pain("A jolt of pain surges through your [name]!",1)
+			*/
+			owner.custom_pain("Вы почувствовали резкий приток боли в [verb_ru("сво;ём;ей;ём;их;")] [pcase_ru(name)]!",1)
+			// End of Bastion of Endeavor Translation
 			owner.Weaken(5)
 
 /obj/item/organ/external/foot/right
@@ -237,11 +281,19 @@
 	//Staph infection symptoms for HAND
 	if (. >= 1)
 		if(prob(.))
+			/* Bastion of Endeavor Translation
 			owner.custom_pain("Your [name] [pick("aches","itches","throbs")]!",0)
+			*/
+			owner.custom_pain("[concat_ru("Ваш;;а;е;и;", src)] [verb_ru(src, pick("чеш;ется;ется;ется;утся","бол;ит;ит;ит;ят;","зуд;ит;ит;ит;ят;"))]!",0)
+			// End of Bastion of Endeavor Translation
 
 	if (. >= 2)
 		if(prob(.))
+			/* Bastion of Endeavor Translation
 			owner.custom_pain("A jolt of pain surges through your [name]!",1)
+			*/
+			owner.custom_pain("Вы почувствовали резкий приток боли в [verb_ru("сво;ём;ей;ём;их;")] [pcase_ru(name)]!",1)
+			// End of Bastion of Endeavor Translation
 			if(organ_tag == BP_L_HAND) //Specific level 2 'feature
 				owner.drop_l_hand()
 			else if(organ_tag == BP_R_HAND)
@@ -300,7 +352,14 @@
 /obj/item/organ/external/head/removed()
 	if(owner)
 		if(iscarbon(owner))
+			/* Bastion of Endeavor Translation
+			// Bastion of Endeavor TODO (MOB Realname): I have no fucking clue if this works as intended yet
 			name = "[owner.real_name]'s head"
+			*/
+			name = "Голова [gcase_ru(owner, secondary = "real_name")]"
+			case_blueprint_ru[1] = "жен#голов;n1f' [gcase_ru(owner, secondary = "real_name")]"
+			construct_cases_ru()
+			// End of Bastion of Endeavor Translation
 			owner.drop_from_inventory(owner.glasses)
 			owner.drop_from_inventory(owner.head)
 			owner.drop_from_inventory(owner.l_ear)
@@ -327,17 +386,30 @@
 	//Staph infection symptoms for HEAD
 	if (. >= 1)
 		if(prob(.))
+			/* Bastion of Endeavor Translation
 			owner.custom_pain("Your [name] [pick("aches","itches","throbs")]!",0)
+			*/
+			owner.custom_pain("[concat_ru("Ваш;;а;е;и;", src)] [verb_ru(src, pick("чеш;ется;ется;ется;утся","бол;ит;ит;ит;ят;","зуд;ит;ит;ит;ят;"))]!",0)
+			// End of Bastion of Endeavor Translation
 
 	if (. >= 2)
 		if(prob(.))
+			/* Bastion of Endeavor Translation
 			owner.custom_pain("A jolt of pain surges through your [name]!",1)
+			*/
+			owner.custom_pain("Вы почувствовали резкий приток боли в [verb_ru("сво;ём;ей;ём;их;")] [pcase_ru(name)]!",1)
+			// End of Bastion of Endeavor Translation
 			owner.eye_blurry += 20 //Specific level 2 'feature
 
 /obj/item/organ/external/head/attackby(obj/item/I as obj, mob/user as mob)
 	if(istype(I, /obj/item/toy/plushie) || istype(I, /obj/item/organ/external/head))
+		/* Bastion of Endeavor Translation
 		user.visible_message("<span class='notice'>[user] makes \the [I] kiss \the [src]!.</span>", \
 		"<span class='notice'>You make \the [I] kiss \the [src]!.</span>")
+		*/
+		user.visible_message("<span class='notice'>[interact_ru(user, "заставил", I)] поцеловать [acase_ru(src)]!.</span>", \
+		"<span class='notice'>Вы заставили [acase_ru(I)] поцеловать [acase_ru(src)]!.</span>")
+		// End of Bastion of Endeavor Translation
 	return ..()
 
 /obj/item/organ/external/head/get_icon(var/skeletal, var/can_apply_transparency = TRUE)

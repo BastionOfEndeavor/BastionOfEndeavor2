@@ -516,7 +516,12 @@ var/const/standard_monitor_styles = "blank=ipc_blank;\
 /obj/item/weapon/disk/limb/New(var/newloc)
 	..()
 	if(company)
+		/* Bastion of Endeavor Translation: probably the least clunkiest way to handle it. also why is this in new when the other disk uses initialize
 		name = "[company] [initial(name)]"
+		*/
+		name = "[initial(name)] [company]"
+		update_blueprint_ru(right = company, separator_right = " ")
+		// End of Bastion of Endeavor Translation
 
 /obj/item/weapon/disk/limb/bishop
 	company = "Bishop"
@@ -567,10 +572,12 @@ var/const/standard_monitor_styles = "blank=ipc_blank;\
 	icon_state = "datadisk2"
 	var/species = SPECIES_HUMAN
 
+/* Bastion of Endeavor Removal : I think the sanest move here is to just remove this bit and handle these individually per species
 /obj/item/weapon/disk/species/Initialize()
 	. = ..()
 	if(species)
 		name = "[species] [initial(name)]"
+*/
 
 /obj/item/weapon/disk/species/skrell
 	species = SPECIES_SKRELL

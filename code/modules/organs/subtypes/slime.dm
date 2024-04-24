@@ -71,7 +71,11 @@
 /obj/item/organ/internal/heart/grey/colormatch/slime/process()
 	..()
 	if(!(QDELETED(src)) && src.loc != owner)
+		/* Bastion of Endeavor Translation
 		visible_message("<b>\The [src]</b> splatters!")
+		*/
+		visible_message("<b>[cap_ru(src)]</b> [verb_ru(src, "разбрызгива;ется;ется;ется;ются;")]!")
+		// End of Bastion of Endeavor Translation
 		var/turf/T = get_turf(src)
 		var/obj/effect/decal/cleanable/blood/B = new (T)
 
@@ -120,7 +124,11 @@
 	..()
 
 	if(!(QDELETED(src)) && src.loc != owner)
+		/* Bastion of Endeavor Translation
 		visible_message("<b>\The [src]</b> splatters!")
+		*/
+		visible_message("<b>[cap_ru(src)]</b> [verb_ru(src, "разбрызгива;ется;ется;ется;ются;")]!")
+		// End of Bastion of Endeavor Translation
 		var/turf/T = get_turf(src)
 		var/obj/effect/decal/cleanable/blood/B = new (T)
 

@@ -14,10 +14,18 @@
 	//Endocarditis (very rare, usually for artificially implanted heart valves/pacemakers)
 	if (. >= 1)
 		if(prob(1))
+			/* Bastion of Endeavor Translation
 			owner.custom_pain("Your chest feels uncomfortably tight!",0)
+			*/
+			owner.custom_pain("Вы чувствуете сильный дискомфорт в груди!",0)
+			// End of Bastion of Endeavor Translation
 	if (. >= 2)
 		if(prob(1))
+			/* Bastion of Endeavor Translation
 			owner.custom_pain("A stabbing pain rolls through your chest!",1)
+			*/
+			owner.custom_pain("Вы чувствуете пронзительную боль в груди!",1)
+			// End of Bastion of Endeavor Translation
 			owner.apply_damage(damage = 25, damagetype = HALLOSS, def_zone = parent_organ)
 
 /obj/item/organ/internal/heart/robotize()

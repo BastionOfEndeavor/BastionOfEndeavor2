@@ -96,7 +96,11 @@ var/list/organ_cache = list()
 			dna = C.dna.Clone()
 			species = C.species //VOREStation Edit - For custom species
 		else
+			/* Bastion of Endeavor Translation
 			log_debug("[src] at [loc] spawned without a proper DNA.")
+			*/
+			log_debug("[cap_ru(src)] ([loc]) [verb_ru(src, "заспавнил;ся;ась;ось;ись;")] без ДНК.")
+			// End of Bastion of Endeavor Translation
 		var/mob/living/carbon/human/H = C
 		if(istype(H))
 			if(internal)
@@ -110,7 +114,11 @@ var/list/organ_cache = list()
 					blood_DNA = list()
 				blood_DNA[dna.unique_enzymes] = dna.b_type
 	else
+		/* Bastion of Endeavor Define Edit
 		species = GLOB.all_species["Human"]
+		*/
+		species = GLOB.all_species[SPECIES_HUMAN]
+		// End of Bastion of Endeavor Define Edit
 
 	handle_organ_mod_special()
 
@@ -197,7 +205,11 @@ var/list/organ_cache = list()
 /obj/item/organ/examine(mob/user)
 	. = ..()
 	if(status & ORGAN_DEAD)
+		/* Bastion of Endeavor Translation
 		. += "<span class='notice'>Decay appears to have set in.</span>"
+		*/
+		. += "<span class='notice'>Похоже, [verb_ru(src, "он;;а;о;и;")] уже [verb_ru(src, "начал")] разлагаться.</span>"
+		// End of Bastion of Endeavor Translation
 
 //A little wonky: internal organs stop calling this (they return early in process) when dead, but external ones cause further damage when dead
 /obj/item/organ/proc/handle_germ_effects()
@@ -291,10 +303,17 @@ var/list/organ_cache = list()
 		handle_organ_mod_special()
 	if(!ignore_prosthetic_prefs && owner && owner.client && owner.client.prefs && owner.client.prefs.real_name == owner.real_name)
 		var/status = owner.client.prefs.organ_data[organ_tag]
+		/* Bastion of Endeavor Define Edit
 		if(status == "assisted")
 			mechassist()
 		else if(status == "mechanical")
 			robotize()
+		*/
+		if(status == "Полумеханический орган")
+			mechassist()
+		else if(status == "Механический орган")
+			robotize()
+		// End of Bastion of Endeavor Define Edit
 
 /obj/item/organ/proc/is_damaged()
 	return damage > 0
@@ -345,7 +364,11 @@ var/list/organ_cache = list()
 		if(owner && parent_organ && amount > 0)
 			var/obj/item/organ/external/parent = owner?.get_organ(parent_organ)
 			if(parent && !silent)
+				/* Bastion of Endeavor Translation
 				owner.custom_pain("Something inside your [parent.name] hurts a lot.", amount)
+				*/
+				owner.custom_pain("Что-то внутри [concat_ru("ваш;его;ей;его;их;", parent, GCASE)] очень сильно болит.", amount)
+				// End of Bastion of Endeavor Translation
 
 /obj/item/organ/proc/bruise()
 	damage = max(damage, min_bruised_damage)
@@ -404,7 +427,11 @@ var/list/organ_cache = list()
 
 		if(owner && vital)
 			if(user)
+				/* Bastion of Endeavor Translation
 				add_attack_logs(user, owner, "Removed vital organ [src.name]")
+				*/
+				add_attack_logs(user, owner, "Извлёк [acase_ru(src)]")
+				// End of Bastion of Endeavor Translation
 			if(owner.stat != DEAD)
 				owner.can_defib = 0
 				owner.death()
@@ -443,7 +470,11 @@ var/list/organ_cache = list()
 	if(robotic >= ORGAN_ROBOT)
 		return
 
+	/* Bastion of Endeavor Translation
 	to_chat(user, "<span class='notice'>You take an experimental bite out of \the [src].</span>")
+	*/
+	to_chat(user, "<span class='notice'>Вы попробовали [acase_ru(src)] на вкус.</span>")
+	// End of Bastion of Endeavor Translation
 	var/datum/reagent/blood/B = locate(/datum/reagent/blood) in reagents.reagent_list
 	blood_splatter(src,B,1)
 
@@ -495,10 +526,18 @@ var/list/organ_cache = list()
 
 /obj/item/organ/proc/butcher(var/obj/item/O, var/mob/living/user, var/atom/newtarget)
 	if(robotic >= ORGAN_ROBOT)
+		/* Bastion of Endeavor Translation
 		user?.visible_message("<span class='notice'>[user] disassembles \the [src].</span>")
+		*/
+		user?.visible_message("<span class='notice'>[interact_ru(user, "разобрал", src)].</span>")
+		// End of Bastion of Endeavor Translation
 
 	else
+		/* Bastion of Endeavor Translation
 		user?.visible_message("<span class='notice'>[user] butchers \the [src].</span>")
+		*/
+		user?.visible_message("<span class='notice'>[interact_ru(user, "разделал", src)].</span>")
+		// End of Bastion of Endeavor Translation
 
 	if(!newtarget)
 		newtarget = get_turf(src)
@@ -506,7 +545,13 @@ var/list/organ_cache = list()
 	var/obj/item/newmeat = new meat_type(newtarget)
 
 	if(istype(newmeat, /obj/item/weapon/reagent_containers/food/snacks/meat))
+		/* Bastion of Endeavor Translation: This is a REALLY experimental way of going about doing cases but I guess we'll see.
 		newmeat.name = "[src.name] [newmeat.name]"	// "liver meat" "heart meat", etc.
+		*/
+		newmeat.case_blueprint_ru[1] += " из [gcase_ru(src)]"
+		newmeat.construct_cases_ru()
+		newmeat.name = cap_ru(src)
+		// End of Bastion of Endeavor Translation
 
 	qdel(src)
 

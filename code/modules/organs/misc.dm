@@ -25,8 +25,15 @@
 		blood_splatter(H,B,1)
 		var/obj/effect/decal/cleanable/blood/splatter/goo = locate() in get_turf(owner)
 		if(goo)
+			/* Bastion of Endeavor Translation
 			goo.name = "husk ichor"
 			goo.desc = "It's thick and stinks of decay."
+			*/
+			goo.name = "Ихорозный гной"
+			goo.desc = "На вид густой, источает запах разложения."
+			goo.case_blueprint_ru[1] = "муж#ихорозн;n1*a гн;n6a"
+			goo.construct_cases_ru()
+			// End of Bastion of Endeavor Translation
 			goo.basecolor = "#412464"
 			goo.update_icon()
 
