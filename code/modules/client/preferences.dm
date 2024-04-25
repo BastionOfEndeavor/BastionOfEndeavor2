@@ -415,7 +415,7 @@ var/list/preferences_datums = list()
 			to_chat(user, "<span class='danger'>URL форума не задан в настройках сервера.</span>")
 			// End of Bastion of Endeavor Translation
 			return
-	ShowChoices(usr)
+	ShowChoices(user) //ChompEDIT - usr removal
 	return 1
 
 /datum/preferences/Topic(href, list/href_list)

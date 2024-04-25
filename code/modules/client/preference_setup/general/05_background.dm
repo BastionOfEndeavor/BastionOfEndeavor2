@@ -248,8 +248,12 @@
 		return TOPIC_REFRESH
 
 	else if(href_list["reset_medrecord"])
+<<<<<<< HEAD
 		/* Bastion of Endeavor Translation
 		var/resetmed_choice = tgui_alert(usr, "Wipe your Medical Records? This cannot be reverted if you have not saved your character recently! You may wish to make a backup first.","Reset Records",list("Yes","No"))
+=======
+		var/resetmed_choice = tgui_alert(user, "Wipe your Medical Records? This cannot be reverted if you have not saved your character recently! You may wish to make a backup first.","Reset Records",list("Yes","No")) //ChompEDIT - usr removal
+>>>>>>> 8d04b28ec2 (Remove many incorrect uses of usr (#8296))
 		if(resetmed_choice == "Yes")
 		*/
 		var/resetmed_choice = tgui_alert(usr, "Удалить медицинские записи вашего персонажа? Это действие невозможно отменить, если вы предварительно не сохранили персонажа! Сделайте запасную копию.","Удалить записи",list("Да","Нет"))
@@ -259,8 +263,12 @@
 		return TOPIC_REFRESH
 
 	else if(href_list["reset_emprecord"])
+<<<<<<< HEAD
 		/* Bastion of Endeavor Translation
 		var/resetemp_choice = tgui_alert(usr, "Wipe your Employment Records? This cannot be reverted if you have not saved your character recently! You may wish to make a backup first.","Reset Records",list("Yes","No"))
+=======
+		var/resetemp_choice = tgui_alert(user, "Wipe your Employment Records? This cannot be reverted if you have not saved your character recently! You may wish to make a backup first.","Reset Records",list("Yes","No")) //ChompEDIT - usr removal
+>>>>>>> 8d04b28ec2 (Remove many incorrect uses of usr (#8296))
 		if(resetemp_choice == "Yes")
 		*/
 		var/resetemp_choice = tgui_alert(usr, "Удалить записи о трудоустройстве вашего персонажа? Это действие невозможно отменить, если вы предварительно не сохранили персонажа! Сделайте запасную копию.","Удалить записи",list("Да","Нет"))
@@ -270,8 +278,12 @@
 		return TOPIC_REFRESH
 
 	else if(href_list["reset_secrecord"])
+<<<<<<< HEAD
 		/* Bastion of Endeavor Translation
 		var/resetsec_choice = tgui_alert(usr, "Wipe your Security Records? This cannot be reverted if you have not saved your character recently! You may wish to make a backup first.","Reset Records",list("Yes","No"))
+=======
+		var/resetsec_choice = tgui_alert(user, "Wipe your Security Records? This cannot be reverted if you have not saved your character recently! You may wish to make a backup first.","Reset Records",list("Yes","No")) //ChompEDIT - usr removal
+>>>>>>> 8d04b28ec2 (Remove many incorrect uses of usr (#8296))
 		if(resetsec_choice == "Yes")
 		*/
 		var/resetsec_choice = tgui_alert(usr, "Удалить записи службы безопасности о вашем персонаже? Это действие невозможно отменить, если вы предварительно не сохранили персонажа! Сделайте запасную копию.","Удалить записи",list("Да","Нет"))

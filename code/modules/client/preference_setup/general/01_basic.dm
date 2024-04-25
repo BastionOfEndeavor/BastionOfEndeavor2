@@ -242,8 +242,12 @@
 				return TOPIC_NOACTION
 
 	else if(href_list["reset_nickname"])
+<<<<<<< HEAD
 		/* Bastion of Endeavor Translation
 		var/nick_choice = tgui_alert(usr, "Wipe your Nickname? This will completely remove any chosen nickname(s).","Wipe Nickname",list("Yes","No"))
+=======
+		var/nick_choice = tgui_alert(user, "Wipe your Nickname? This will completely remove any chosen nickname(s).","Wipe Nickname",list("Yes","No"))  //ChompEDIT - usr removal
+>>>>>>> 8d04b28ec2 (Remove many incorrect uses of usr (#8296))
 		if(nick_choice == "Yes")
 		*/
 		var/nick_choice = tgui_alert(usr, "Вы действительно хотите сбросить своё прозвище?","Сбросить прозвище",list("Да","Нет"))
@@ -374,6 +378,7 @@
 		return TOPIC_REFRESH
 
 	else if(href_list["edit_ooc_notes"])
+<<<<<<< HEAD
 		/* Bastion of Endeavor Translation
 		var/new_metadata = strip_html_simple(tgui_input_text(usr, "Enter any information you'd like others to see, such as Roleplay-preferences. This will not be saved permanently unless you click save in the Character Setup panel!", "Game Preference" , html_decode(pref.metadata), multiline = TRUE,  prevent_enter = TRUE))
 		*/
@@ -387,6 +392,13 @@
 		*/
 		var/new_metadata = strip_html_simple(tgui_input_text(usr, "Укажите здесь любую внеигровую информацию относительно того, что вам НРАВИТСЯ в отыгрыше, которую хотите сообщить остальным. Введите !очистить, чтобы очистить поле.", "Примечания OOC" , html_decode(pref.metadata), multiline = TRUE,  prevent_enter = TRUE))
 		// End of Bastion of Endeavor Translation
+=======
+		var/new_metadata = strip_html_simple(tgui_input_text(user, "Enter any information you'd like others to see, such as Roleplay-preferences. This will not be saved permanently unless you click save in the Character Setup panel!", "Game Preference" , html_decode(pref.metadata), multiline = TRUE,  prevent_enter = TRUE)) //ChompEDIT - usr removal
+		if(new_metadata && CanUseTopic(user))
+			pref.metadata = new_metadata
+	else if(href_list["edit_ooc_note_likes"])
+		var/new_metadata = strip_html_simple(tgui_input_text(user, "Enter any information you'd like others to see relating to your LIKED roleplay preferences. This will not be saved permanently unless you click save in the Character Setup panel! Type \"!clear\" to empty.", "Game Preference" , html_decode(pref.metadata_likes), multiline = TRUE,  prevent_enter = TRUE)) //ChompEDIT - usr removal
+>>>>>>> 8d04b28ec2 (Remove many incorrect uses of usr (#8296))
 		if(new_metadata && CanUseTopic(user))
 			/* Bastion of Endeavor Translation
 			if(new_metadata == "!clear")
@@ -396,11 +408,15 @@
 				new_metadata = ""
 			pref.metadata_likes = new_metadata
 	else if(href_list["edit_ooc_note_dislikes"])
+<<<<<<< HEAD
 		/* Bastion of Endeavor Translation
 		var/new_metadata = strip_html_simple(tgui_input_text(usr, "Enter any information you'd like others to see relating to your DISLIKED roleplay preferences. This will not be saved permanently unless you click save in the Character Setup panel! Type \"!clear\" to empty.", "Game Preference" , html_decode(pref.metadata_dislikes), multiline = TRUE,  prevent_enter = TRUE))
 		*/
 		var/new_metadata = strip_html_simple(tgui_input_text(usr, "Укажите здесь любую внеигровую информацию относительно того, что вам НЕ НРАВИТСЯ в отыгрыше, которую хотите сообщить остальным. Введите !очистить, чтобы очистить поле.", "Примечания OOC" , html_decode(pref.metadata), multiline = TRUE,  prevent_enter = TRUE))
 		// End of Bastion of Endeavor Translation
+=======
+		var/new_metadata = strip_html_simple(tgui_input_text(user, "Enter any information you'd like others to see relating to your DISLIKED roleplay preferences. This will not be saved permanently unless you click save in the Character Setup panel! Type \"!clear\" to empty.", "Game Preference" , html_decode(pref.metadata_dislikes), multiline = TRUE,  prevent_enter = TRUE)) //ChompEDIT - usr removal
+>>>>>>> 8d04b28ec2 (Remove many incorrect uses of usr (#8296))
 		if(new_metadata && CanUseTopic(user))
 			/* Bastion of Endeavor Translation
 			if(new_metadata == "!clear")
@@ -411,11 +427,15 @@
 			pref.metadata_dislikes = new_metadata
 	//CHOMPEdit Start
 	else if(href_list["edit_ooc_note_favs"])
+<<<<<<< HEAD
 		/* Bastion of Endeavor Translation
 		var/new_metadata = strip_html_simple(tgui_input_text(usr, "Enter any information you'd like others to see relating to your FAVOURITE roleplay preferences. This will not be saved permanently unless you click save in the Character Setup panel! Type \"!clear\" to empty.", "Game Preference" , html_decode(pref.metadata_favs), multiline = TRUE,  prevent_enter = TRUE))
 		*/
 		var/new_metadata = strip_html_simple(tgui_input_text(usr, "Укажите здесь любую внеигровую информацию относительно того, что вы ОБОЖАЕТЕ в отыгрыше, которую хотите сообщить остальным. Введите !очистить, чтобы очистить поле.", "Примечания OOC", html_decode(pref.metadata_favs), multiline = TRUE,  prevent_enter = TRUE))
 		// End of Bastion of Endeavor Translation
+=======
+		var/new_metadata = strip_html_simple(tgui_input_text(user, "Enter any information you'd like others to see relating to your FAVOURITE roleplay preferences. This will not be saved permanently unless you click save in the Character Setup panel! Type \"!clear\" to empty.", "Game Preference" , html_decode(pref.metadata_favs), multiline = TRUE,  prevent_enter = TRUE)) //ChompEDIT - usr removal
+>>>>>>> 8d04b28ec2 (Remove many incorrect uses of usr (#8296))
 		if(new_metadata && CanUseTopic(user))
 			/* Bastion of Endeavor Translation
 			if(new_metadata == "!clear")
@@ -425,11 +445,15 @@
 				new_metadata = ""
 			pref.metadata_favs = new_metadata
 	else if(href_list["edit_ooc_note_maybes"])
+<<<<<<< HEAD
 		/* Bastion of Endeavor Translation
 		var/new_metadata = strip_html_simple(tgui_input_text(usr, "Enter any information you'd like others to see relating to your MAYBE roleplay preferences. This will not be saved permanently unless you click save in the Character Setup panel! Type \"!clear\" to empty.", "Game Preference" , html_decode(pref.metadata_maybes), multiline = TRUE,  prevent_enter = TRUE))
 		*/
 		var/new_metadata = strip_html_simple(tgui_input_text(usr, "Укажите здесь любую внеигровую информацию относительно того, какие темы в отыгрыше для вас НЕОДНОЗНАЧНЫ, которую хотите сообщить остальным. Введите !очистить, чтобы очистить поле.", "Примечания OOC", html_decode(pref.metadata_maybes), multiline = TRUE,  prevent_enter = TRUE))
 		// End of Bastion of Endeavor Translation
+=======
+		var/new_metadata = strip_html_simple(tgui_input_text(user, "Enter any information you'd like others to see relating to your MAYBE roleplay preferences. This will not be saved permanently unless you click save in the Character Setup panel! Type \"!clear\" to empty.", "Game Preference" , html_decode(pref.metadata_maybes), multiline = TRUE,  prevent_enter = TRUE)) //ChompEDIT - usr removal
+>>>>>>> 8d04b28ec2 (Remove many incorrect uses of usr (#8296))
 		if(new_metadata && CanUseTopic(user))
 			/* Bastion of Endeavor Translation
 			if(new_metadata == "!clear")

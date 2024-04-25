@@ -42,11 +42,15 @@
 /datum/category_item/player_setup_item/volume_sliders/media/OnTopic(var/href, var/list/href_list, var/mob/user)
 	if(href_list["change_media_volume"])
 		if(CanUseTopic(user))
+<<<<<<< HEAD
 			/* Bastion of Endeavor Translation
 			var/value = tgui_input_number(usr, "Choose your Jukebox volume (0-100%)", "Jukebox volume", round(pref.media_volume * 100), 100, 0)
 			*/
 			var/value = tgui_input_number(usr, "Укажите громкость музыкального автомата (0-100%)", "Громкость музыкального автомата", round(pref.media_volume * 100), 100, 0)
 			// End of Bastion of Endeavor Translation
+=======
+			var/value = tgui_input_number(user, "Choose your Jukebox volume (0-100%)", "Jukebox volume", round(pref.media_volume * 100), 100, 0) //ChompEDIT - usr removal
+>>>>>>> 8d04b28ec2 (Remove many incorrect uses of usr (#8296))
 			if(isnum(value))
 				value = CLAMP(value, 0, 100)
 				pref.media_volume = value/100.0

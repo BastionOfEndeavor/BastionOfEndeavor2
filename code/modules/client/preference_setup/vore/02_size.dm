@@ -266,11 +266,15 @@
 	else if(href_list["voice_freq"])
 		/* Bastion of Endeavor Translation
 		var/list/preset_voice_freqs = list("high" = MAX_VOICE_FREQ, "middle-high" = 56250, "middle" = 42500, "middle-low"= 28750, "low" = MIN_VOICE_FREQ, "custom" = 1, "random" = 0)
+<<<<<<< HEAD
 		var/choice = tgui_input_list(usr, "What would you like to set your voice frequency to? ([MIN_VOICE_FREQ] - [MAX_VOICE_FREQ])", "Voice Frequency", preset_voice_freqs)
 		*/
 		var/list/preset_voice_freqs = list("Высокая" = MAX_VOICE_FREQ, "Средне-высокая" = 56250, "Средняя" = 42500, "Средне-низкая"= 28750, "Низкая" = MIN_VOICE_FREQ, "Другая" = 1, "Случайная" = 0)
 		var/choice = tgui_input_list(usr, "Укажите частоту голоса вашего персонажа:", "Частота голоса", preset_voice_freqs)
 		// End of Bastion of Endeavor Translation
+=======
+		var/choice = tgui_input_list(user, "What would you like to set your voice frequency to? ([MIN_VOICE_FREQ] - [MAX_VOICE_FREQ])", "Voice Frequency", preset_voice_freqs) //ChompEDIT - usr removal
+>>>>>>> 8d04b28ec2 (Remove many incorrect uses of usr (#8296))
 		if(!choice)
 			return
 		choice = preset_voice_freqs[choice]
@@ -308,7 +312,7 @@
 			"goon speak roach",
 			"goon speak skelly",
 			"xeno speak") // CHOMPedit
-		var/choice = tgui_input_list(usr, "Which set of sounds would you like to use for your character's speech sounds?", "Voice Sounds", possible_voice_types)
+		var/choice = tgui_input_list(user, "Which set of sounds would you like to use for your character's speech sounds?", "Voice Sounds", possible_voice_types)
 		if(!pref.voice_sound)
 			pref.voice_sound = "goon speak 1"	//CHOMPEdit - Defaults voice to a less jarring sound
 		else if(!choice)
@@ -325,8 +329,12 @@
 		return TOPIC_REFRESH
 		// End of Bastion of Endeavor Translation
 	else if(href_list["customize_speech_bubble"])
+<<<<<<< HEAD
 		/* Bastion of Endeavor Translation: I mean, not future-proof, but if it works it works?
 		var/choice = tgui_input_list(usr, "What speech bubble style do you want to use? (default for automatic selection)", "Custom Speech Bubble", selectable_speech_bubbles)
+=======
+		var/choice = tgui_input_list(user, "What speech bubble style do you want to use? (default for automatic selection)", "Custom Speech Bubble", selectable_speech_bubbles)
+>>>>>>> 8d04b28ec2 (Remove many incorrect uses of usr (#8296))
 		if(!choice)
 			pref.custom_speech_bubble = "default"
 		else
@@ -383,11 +391,15 @@
 	// CHOMPEdit Start: Pain/Scream/Death sounds
 	else if(href_list["species_sound_options"]) // You shouldn't be able to see this option if you don't have the option to select a custom icon base, so we don't need to re-check for safety here.
 		var/list/possible_species_sound_types = species_sound_map
+<<<<<<< HEAD
 		/* Bastion of Endeavor Translation
 		var/choice = tgui_input_list(usr, "Which set of sounds would you like to use for your character's species sounds? (Cough, Sneeze, Scream, Pain, Gasp, Death)", "Species Sounds", possible_species_sound_types)
 		*/
 		var/choice = tgui_input_list(usr, "Какой набор расовых звуков использует ваш персонаж?", "Расовые звуки", possible_species_sound_types)
 		// End of Bastion of Endeavor Translation
+=======
+		var/choice = tgui_input_list(user, "Which set of sounds would you like to use for your character's species sounds? (Cough, Sneeze, Scream, Pain, Gasp, Death)", "Species Sounds", possible_species_sound_types)
+>>>>>>> 8d04b28ec2 (Remove many incorrect uses of usr (#8296))
 		if(!choice)
 			return TOPIC_REFRESH // No choice? Don't reset our selection
 		else
