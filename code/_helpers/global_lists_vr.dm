@@ -1244,7 +1244,8 @@ var/global/list/SPECIALS = list(
 	/turf/unsimulated/wall/planetary,
 	/area/submap/virgo2,
 	/area/submap/event,
-	/area/submap/casino_event
+	/area/submap/casino_event,
+	/area/vr //CHOMPedit
 	// /area/derelict //commented out, all hail derelict-rebuilders!
 )
 
@@ -1266,5 +1267,6 @@ var/global/list/area_or_turf_fail_types = typecacheof(list(
 	/turf/unsimulated/wall/planetary,
 	/area/submap/virgo2,
 	/area/submap/event,
-	/area/submap/casino_event
+	/area/submap/casino_event,
+	/area/vr //CHOMPedit
 	))
