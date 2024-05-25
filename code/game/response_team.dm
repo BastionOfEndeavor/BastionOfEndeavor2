@@ -10,7 +10,7 @@ var/silent_ert = 0
 /client/proc/response_team()
 	/* Bastion of Endeavor Translation
 	set name = "Dispatch Emergency Response Team"
-	set category = "Special Verbs"
+	set category = "Fun.Event Kit" //CHOMPEdit
 	set desc = "Send an emergency response team to the station"
 	*/
 	set name = "Отправить ОБР"
@@ -90,11 +90,15 @@ var/silent_ert = 0
 
 	/* Bastion of Endeavor Translation
 	set name = "Join Response Team"
+<<<<<<< HEAD
 	set category = "IC"
 	*/
 	set name = "Присоединиться к ОБР"
 	set category = "IC"
 	// End of Bastion of Endeavor Translation
+=======
+	set category = "IC.Event" //CHOMPEdit
+>>>>>>> e28fa96705 (Tg panel patch 2 (#8085))
 
 	if(!MayRespawn(1))
 		/* Bastion of Endeavor Translation

@@ -13,8 +13,13 @@
 /client/verb/ping()
 	/* Bastion of Endeavor Translation
 	set name = "Ping"
+<<<<<<< HEAD
 	*/
 	set name = "Пинг"
 	// End of Bastion of Endeavor Translation
 	set category = "OOC"
 	winset(src, null, "command=.display_ping+[world.time+world.tick_lag*world.tick_usage/100]") 
+=======
+	set category = "OOC.Debug" //CHOMPEdit
+	winset(src, null, "command=.display_ping+[world.time+world.tick_lag*world.tick_usage/100]")
+>>>>>>> e28fa96705 (Tg panel patch 2 (#8085))

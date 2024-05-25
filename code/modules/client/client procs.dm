@@ -632,11 +632,15 @@
 /client/verb/character_setup()
 	/* Bastion of Endeavor Translation
 	set name = "Character Setup"
+<<<<<<< HEAD
 	set category = "Preferences"
 	*/
 	set name = "Редактор персонажа"
 	set category = "Предпочтения"
 	// End of Bastion of Endeavor Translation
+=======
+	set category = "Preferences.Character" //CHOMPEdit
+>>>>>>> e28fa96705 (Tg panel patch 2 (#8085))
 	if(prefs)
 		prefs.ShowChoices(usr)
 
@@ -752,10 +756,14 @@
 /client/verb/toggle_fullscreen()
 	/* Bastion of Endeavor Translation
 	set name = "Toggle Fullscreen"
+<<<<<<< HEAD
 	*/
 	set name = "Полноэкранный режим"
 	// End of Bastion of Endeavor Translation
 	set category = "OOC"
+=======
+	set category = "OOC.Client Settings" //CHOMPEdit
+>>>>>>> e28fa96705 (Tg panel patch 2 (#8085))
 
 	fullscreen = !fullscreen
 
@@ -776,7 +784,7 @@
 /*
 /client/verb/toggle_status_bar()
 	set name = "Toggle Status Bar"
-	set category = "OOC"
+	set category = "OOC.Client Settings" //CHOMPEdit
 
 	show_status_bar = !show_status_bar
 

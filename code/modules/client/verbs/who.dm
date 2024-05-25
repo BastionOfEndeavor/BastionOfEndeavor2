@@ -1,7 +1,7 @@
 /client/verb/who()
 	/* Bastion of Endeavor Translation
 	set name = "Who"
-	set category = "OOC"
+	set category = "OOC.Resources" //CHOMPEdit
 
 	var/msg = "<b>Current Players:</b>\n"
 	*/

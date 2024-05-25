@@ -117,7 +117,7 @@
 /client/verb/volume_panel()
 	/* Bastion of Endeavor Translation
 	set name = "Volume Panel"
-	set category = "Preferences"
+	set category = "Preferences.Sounds" //CHOMPEdit
 	set desc = "Allows you to adjust volume levels on the fly."
 	*/
 	set name = "Микшер"

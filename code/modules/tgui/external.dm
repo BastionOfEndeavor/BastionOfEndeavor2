@@ -184,11 +184,15 @@
 	/* Bastion of Endeavor Translation
 	set desc = "Only use this if you have a broken TGUI window occupying your screen!"
 	set name = "Fix TGUI"
+<<<<<<< HEAD
 	*/
 	set desc = "Используйте этот глагол, если на экране зависли белые окна."
 	set name = "Закрыть окна TGUI"
 	// End of Bastion of Endeavor Translation
 	set category = "OOC"
+=======
+	set category = "OOC.Debug" //CHOMPEdit
+>>>>>>> e28fa96705 (Tg panel patch 2 (#8085))
 
 	/* Bastion of Endeavor Translation
 	if(alert(src, "Only use this verb if you have a white TGUI window stuck on your screen.", "Fix TGUI", "Continue", "Nevermind") != "Continue") // Not tgui_alert since we're fixing tgui

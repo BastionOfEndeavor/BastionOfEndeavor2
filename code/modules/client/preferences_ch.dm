@@ -1,7 +1,7 @@
 /client/verb/toggle_looping_alarms()
 	/* Bastion of Endeavor Translation
 	set name = "Looping Alarms"
-	set category = "Preferences"
+	set category = "Preferences.Sounds" //CHOMPEdit
 	set desc = "Toggles alarm sound loops."
 	*/
 	set name = "Звуки тревог"
@@ -26,7 +26,7 @@
 /client/verb/toggle_sleep_music()
 	/* Bastion of Endeavor Translation
 	set name = "Toggle Sleeping Music"
-	set category = "Preferences"
+	set category = "Preferences.Sounds" //CHOMPEdit
 	set desc = "When enabled, you will hear cozy music played during surgery, cryo, and sleeper pod usage."
 	*/
 	set name = "Музыка при сне"

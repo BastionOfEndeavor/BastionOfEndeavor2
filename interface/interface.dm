@@ -3,11 +3,15 @@
 	/* Bastion of Endeavor Translation
 	set name = "wiki"
 	set desc = "Type what you want to know about.  This will open the wiki on your web browser."
+<<<<<<< HEAD
 	*/
 	set name = "Вики сервера"
 	set desc = "Ввести интересующую тему, чтобы открыть результаты поиска на вики в браузере."
 	// End of Bastion of Endeavor Translation
 	set category = "OOC"
+=======
+	set category = "OOC.Resources" //CHOMPEdit
+>>>>>>> e28fa96705 (Tg panel patch 2 (#8085))
 	if(CONFIG_GET(string/wikiurl)) // CHOMPEdit
 		if(query)
 			if(CONFIG_GET(string/wikisearchurl)) // CHOMPEdit
@@ -191,10 +195,14 @@
 /client/verb/hotkeys_help()
 	/* Bastion of Endeavor Translation
 	set name = "hotkeys-help"
+<<<<<<< HEAD
 	*/
 	set name = "Показать управление"
 	// End of Bastion of Endeavor Translation
 	set category = "OOC"
+=======
+	set category = "OOC.Resources" //CHOMPEdit
+>>>>>>> e28fa96705 (Tg panel patch 2 (#8085))
 
 	/* Bastion of Endeavor Translation
 	var/admin = {"<font color='AD5AAD'>

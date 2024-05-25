@@ -11,7 +11,7 @@
 /client/verb/toggle_random_emote_pitch()
 	/* Bastion of Endeavor Translation: I hate this
 	set name = "Toggle Random Emote Pitch"
-	set category = "Preferences"
+	set category = "Preferences.Character"
 	set desc = "Toggles whether or not emotes with sound you make will have random pitch."
 	*/
 	set name = "Случайный тон озвученных действий"
@@ -36,7 +36,7 @@
 /client/verb/toggle_autotranscore()
 	/* Bastion of Endeavor Translation
 	set name = "Toggle Automatic Transcore Notification"
-	set category = "Preferences"
+	set category = "Preferences.Character"
 	set desc = "Toggles whether or not your death with a backup implant will automatically trigger a transcore notification after a few minutes."
 	*/
 	set name = "Автоматическое уведомление трансядра"

@@ -73,8 +73,12 @@
 		. += "<a href=\"[CONFIG_GET(string/githuburl)]/pull/[tm.number]\">#[tm.number][details]</a>" // CHOMPEdit
 
 /client/verb/showrevinfo()
+<<<<<<< HEAD
 	/* Bastion of Endeavor Translation
 	set category = "OOC"
+=======
+	set category = "OOC.Game" //CHOMPEdit
+>>>>>>> e28fa96705 (Tg panel patch 2 (#8085))
 	set name = "Show Server Revision"
 	set desc = "Check the current server code revision"
 	*/

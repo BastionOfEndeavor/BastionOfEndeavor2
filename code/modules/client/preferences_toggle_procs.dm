@@ -2,7 +2,7 @@
 /client/verb/toggle_ghost_ears()
 	/* Bastion of Endeavor Translation
 	set name = "Toggle Ghost Ears"
-	set category = "Preferences"
+	set category = "Preferences.Chat" //CHOMPEdit
 	set desc = "Toggles between seeing all mob speech and only nearby mob speech as an observer."
 	*/
 	set name = "Призрачный слух"
@@ -27,7 +27,7 @@
 /client/verb/toggle_ghost_vision()
 	/* Bastion of Endeavor Translation
 	set name = "Toggle Ghost Sight"
-	set category = "Preferences"
+	set category = "Preferences.Chat" //CHOMPEdit
 	set desc = "Toggles between seeing all mob emotes and only nearby mob emotes as an observer."
 	*/
 	set name = "Призрачное зрение"
@@ -52,7 +52,7 @@
 /client/verb/toggle_ghost_radio()
 	/* Bastion of Endeavor Translation
 	set name = "Toggle Ghost Radio"
-	set category = "Preferences"
+	set category = "Preferences.Chat" //CHOMPEdit
 	set desc = "Toggles between seeing all radio chat and only nearby radio chatter as an observer."
 	*/
 	set name = "Призрачная рация"
@@ -77,7 +77,7 @@
 /client/verb/toggle_deadchat()
 	/* Bastion of Endeavor Translation
 	set name = "Toggle Deadchat"
-	set category = "Preferences"
+	set category = "Preferences.Chat" //CHOMPEdit
 	set desc = "Toggles visibility of dead chat."
 	*/
 	set name = "Отображение чата мёртвых"
@@ -102,7 +102,7 @@
 /client/verb/toggle_ooc()
 	/* Bastion of Endeavor Translation
 	set name = "Toggle OOC"
-	set category = "Preferences"
+	set category = "Preferences.Chat" //CHOMPEdit
 	set desc = "Toggles visibility of global out of character chat."
 	*/
 	set name = "Отображение чата OOC"
@@ -127,7 +127,7 @@
 /client/verb/toggle_looc()
 	/* Bastion of Endeavor Translation
 	set name = "Toggle LOOC"
-	set category = "Preferences"
+	set category = "Preferences.Chat" //CHOMPEdit
 	set desc = "Toggles visibility of local out of character chat."
 	*/
 	set name = "Отображение чата LOOC"
@@ -152,7 +152,7 @@
 /client/verb/toggle_precision_placement()
 	/* Bastion of Endeavor Translation
 	set name = "Toggle Precision Placement"
-	set category = "Preferences"
+	set category = "Preferences.Game" //CHOMPEdit
 	set desc = "Toggles whether objects placed on table will be on cursor position or centered."
 	*/
 	set name = "Точное размещение"
@@ -177,7 +177,7 @@
 /client/verb/toggle_typing()
 	/* Bastion of Endeavor Translation
 	set name = "Toggle Typing Indicator"
-	set category = "Preferences"
+	set category = "Preferences.Game" //CHOMPEdit
 	set desc = "Toggles you having the speech bubble typing indicator."
 	*/
 	set name = "Индикатор набора текста"
@@ -202,7 +202,7 @@
 /client/verb/toggle_ahelp_sound()
 	/* Bastion of Endeavor Translation
 	set name = "Toggle Admin Help Sound"
-	set category = "Preferences"
+	set category = "Preferences.Sounds" //CHOMPEdit
 	set desc = "Toggles the ability to hear a noise broadcasted when you get an admin message."
 	*/
 	set name = "Звук Помощи администратора"
@@ -227,7 +227,7 @@
 /client/verb/toggle_lobby_music()
 	/* Bastion of Endeavor Translation
 	set name = "Toggle Lobby Music"
-	set category = "Preferences"
+	set category = "Preferences.Sounds" //CHOMPEdit
 	set desc = "Toggles the ability to hear the music in the lobby."
 	*/
 	set name = "Музыка в лобби"
@@ -252,7 +252,7 @@
 /client/verb/toggle_admin_midis()
 	/* Bastion of Endeavor Translation
 	set name = "Toggle Admin Music"
-	set category = "Preferences"
+	set category = "Preferences.Sounds" //CHOMPEdit
 	set desc = "Toggles the ability to hear music played by admins."
 	*/
 	set name = "Музыка от администраторов"
@@ -277,7 +277,7 @@
 /client/verb/toggle_ambience()
 	/* Bastion of Endeavor Translation
 	set name = "Toggle Ambience"
-	set category = "Preferences"
+	set category = "Preferences.Sounds" //CHOMPEdit
 	set desc = "Toggles the ability to hear local ambience."
 	*/
 	set name = "Звуки окружения"
@@ -302,7 +302,7 @@
 /client/verb/toggle_weather_sounds()
 	/* Bastion of Endeavor Translation
 	set name = "Toggle Weather Sounds"
-	set category = "Preferences"
+	set category = "Preferences.Sounds" //CHOMPEdit
 	set desc = "Toggles the ability to hear weather sounds while on a planet."
 	*/
 	set name = "Звуки погоды"
@@ -327,7 +327,7 @@
 /client/verb/toggle_supermatter_hum()
 	/* Bastion of Endeavor Translation
 	set name = "Toggle SM Hum" // Avoiding using the full 'Supermatter' name to not conflict with the Setup-Supermatter adminverb.
-	set category = "Preferences"
+	set category = "Preferences.Sounds" //CHOMPEdit
 	set desc = "Toggles the ability to hear supermatter hums."
 	*/
 	set name = "Гул суперматерии"
@@ -352,7 +352,7 @@
 /client/verb/toggle_jukebox()
 	/* Bastion of Endeavor Translation
 	set name = "Toggle Jukebox"
-	set category = "Preferences"
+	set category = "Preferences.Sounds" //CHOMPEdit
 	set desc = "Toggles the ability to hear jukebox music."
 	*/
 	set name = "Звуки музыкального автомата"
@@ -377,7 +377,7 @@
 /client/verb/toggle_be_special(role in be_special_flags)
 	/* Bastion of Endeavor Translation
 	set name = "Toggle Special Role Candidacy"
-	set category = "Preferences"
+	set category = "Preferences.Character" //CHOMPEdit
 	set desc = "Toggles which special roles you would like to be a candidate for, during events."
 	*/
 	set name = "Кандидатура на особые роли"
@@ -402,7 +402,7 @@
 /client/verb/toggle_air_pump_hum()
 	/* Bastion of Endeavor Translation
 	set name = "Toggle Air Vent Noise"
-	set category = "Preferences"
+	set category = "Preferences.Sounds" //CHOMPEdit
 	set desc = "Toggles the ability to hear air vent humming."
 	*/
 	set name = "Звуки вентиляции"
@@ -427,7 +427,7 @@
 /client/verb/toggle_old_door_sounds()
 	/* Bastion of Endeavor Translation
 	set name = "Toggle Door: Old Sounds"
-	set category = "Preferences"
+	set category = "Preferences.Sounds" //CHOMPEdit
 	set desc = "Toggles door sounds between old and new."
 	*/
 	set name = "Звуки шлюзов"
@@ -452,7 +452,7 @@
 /client/verb/toggle_department_door_sounds()
 	/* Bastion of Endeavor Translation
 	set name = "Toggle Door: Department Sounds"
-	set category = "Preferences"
+	set category = "Preferences.Sounds" //CHOMPEdit
 	set desc = "Toggles hearing of department-specific door sounds."
 	*/
 	set name = "Звуки шлюзов отделов"
@@ -477,7 +477,7 @@
 /client/verb/toggle_pickup_sounds()
 	/* Bastion of Endeavor Translation
 	set name = "Toggle Item: Picked up Sounds"
-	set category = "Preferences"
+	set category = "Preferences.Sounds" //CHOMPEdit
 	set desc = "Toggles the ability to hear sounds when items are picked up."
 	*/
 	set name = "Звуки при взятии предметов"
@@ -502,7 +502,7 @@
 /client/verb/toggle_drop_sounds()
 	/* Bastion of Endeavor Translation
 	set name = "Toggle Item: Dropped Sounds"
-	set category = "Preferences"
+	set category = "Preferences.Sounds" //CHOMPEdit
 	set desc = "Toggles the ability to hear sounds when items are dropped or thrown."
 	*/
 	set name = "Звуки при броске предметов"
@@ -527,7 +527,7 @@
 /client/verb/toggle_safe_firing()
 	/* Bastion of Endeavor Translation
 	set name = "Toggle Gun Firing Intent Requirement"
-	set category = "Preferences"
+	set category = "Preferences.Game" //CHOMPEdit
 	set desc = "Toggles between safe and dangerous firing. Safe requires a non-help intent to fire, dangerous can be fired on help intent."
 	*/
 	set name = "Режим огнестрельного оружия"
@@ -550,7 +550,7 @@
 /* Bastion of Endeavor Translation
 /client/verb/toggle_mob_tooltips()
 	set name = "Toggle Mob Tooltips"
-	set category = "Preferences"
+	set category = "Preferences.Game" //CHOMPEdit
 	set desc = "Toggles displaying name/species over mobs when they are moused over."
 */
 /client/verb/toggle_mob_tooltips()
@@ -575,7 +575,7 @@
 /client/verb/toggle_inv_tooltips()
 	/* Bastion of Endeavor Translation
 	set name = "Toggle Item Tooltips"
-	set category = "Preferences"
+	set category = "Preferences.Game" //CHOMPEdit
 	set desc = "Toggles displaying name/desc over items when they are moused over (only applies in inventory)."
 	*/
 	set name = "Всплывающие подсказки в инвентаре"
@@ -598,7 +598,7 @@
 /client/verb/toggle_hear_instruments()
 	/* Bastion of Endeavor Translation
 	set name = "Toggle Hear/Ignore Instruments"
-	set category = "Preferences"
+	set category = "Preferences.Sounds" //CHOMPEdit
 	set desc = "Toggles the ability to hear instruments playing."
 	*/
 	set name = "Звуки музыкальных инструментов"
@@ -621,7 +621,7 @@
 /client/verb/toggle_vchat()
 	/* Bastion of Endeavor Translation
 	set name = "Toggle TGChat"
-	set category = "Preferences"
+	set category = "Preferences.Chat" //CHOMPEdit
 	set desc = "Toggles TGChat. Reloading TGChat and/or reconnecting required to affect changes."
 	*/
 	set name = "Переключить TGChat"
@@ -646,7 +646,7 @@
 /client/verb/toggle_chat_timestamps()
 	/* Bastion of Endeavor Translation
 	set name = "Toggle Chat Timestamps"
-	set category = "Preferences"
+	set category = "Preferences.Chat" //CHOMPEdit
 	set desc = "Toggles whether or not messages in chat will display timestamps. Enabling this will not add timestamps to messages that have already been sent."
 	*/
 	set name = "Отметки времени"
@@ -666,7 +666,7 @@
 /client/verb/toggle_throwmode_messages()
 	/* Bastion of Endeavor Translation
 	set name = "Toggle Throw Mode Messages"
-	set category = "Preferences"
+	set category = "Preferences.Chat" //CHOMPEdit
 	set desc = "Toggles whether or not activating throw mode (hotkey: R) will announce you're preparing to throw your current handheld item, or catch an incoming item if your hand is empty."
 	*/
 	set name = "Оповещения о метании"
@@ -686,7 +686,7 @@
 /client/verb/toggle_status_indicators()
 	/* Bastion of Endeavor Translation
 	set name = "Toggle Status Indicators"
-	set category = "Preferences"
+	set category = "Preferences.Game" //CHOMPEdit
 	set desc = "Toggles seeing status indicators over peoples' heads."
 	*/
 	set name = "Индикаторы состояния"
@@ -710,7 +710,7 @@
 /client/verb/toggle_radio_sounds()
 	/* Bastion of Endeavor Translation
 	set name = "Toggle Radio Sounds"
-	set category = "Preferences"
+	set category = "Preferences.Sounds" //CHOMPEdit
 	set desc = "Toggle hearing a sound when somebody speaks over your headset."
 	*/
 	set name = "Звуки рации"
@@ -733,7 +733,7 @@
 /client/verb/toggle_say_sounds()
 	/* Bastion of Endeavor Translation
 	set name = "Toggle Voice Sounds"	//CHOMPEdit - changed name to one that doesn't interfere with say autofill
-	set category = "Preferences"
+	set category = "Preferences.Sounds" //CHOMPEdit
 	set desc = "Toggle hearing a sound when somebody speaks or emotes."
 	*/
 	set name = "Голоса при речи"
@@ -757,7 +757,7 @@ CHOMPRemove. Bundled voice sounds into emote/whisper/subtle. Going this extra le
 
 /client/verb/toggle_emote_sounds()
 	set name = "Sound-Toggle-Me"
-	set category = "Preferences"
+	set category = "Preferences.Sounds" //CHOMPEdit
 	set desc = "Toggle hearing a sound when somebody speaks using me ."
 
 	var/pref_path = /datum/client_preference/emote_sounds
@@ -770,7 +770,7 @@ CHOMPRemove. Bundled voice sounds into emote/whisper/subtle. Going this extra le
 
 /client/verb/toggle_whisper_sounds()
 	set name = "Sound-Toggle-Whisper"
-	set category = "Preferences"
+	set category = "Preferences.Sounds" //CHOMPEdit
 	set desc = "Toggle hearing a sound when somebody speaks using whisper."
 
 	var/pref_path = /datum/client_preference/whisper_sounds
@@ -783,7 +783,7 @@ CHOMPRemove. Bundled voice sounds into emote/whisper/subtle. Going this extra le
 
 /client/verb/toggle_subtle_sounds()
 	set name = "Sound-Toggle-Subtle"
-	set category = "Preferences"
+	set category = "Preferences.Sounds" //CHOMPEdit
 	set desc = "Toggle hearing a sound when somebody uses subtle."
 
 	var/pref_path = /datum/client_preference/subtle_sounds
@@ -798,7 +798,7 @@ CHOMPRemove. Bundled voice sounds into emote/whisper/subtle. Going this extra le
 /client/verb/toggle_vore_health_bars()
 	/* Bastion of Endeavor Translation
 	set name = "Toggle Vore Health Bars"
-	set category = "Preferences"
+	set category = "Preferences.Vore" //CHOMPEdit
 	set desc = "Toggle the display of vore related health bars"
 	*/
 	set name = "Шкалы здоровья при Vore"
@@ -818,7 +818,7 @@ CHOMPRemove. Bundled voice sounds into emote/whisper/subtle. Going this extra le
 /client/verb/toggle_examine_mode()
 	/* Bastion of Endeavor Translation
 	set name = "Toggle Examine Mode"
-	set category = "Preferences"
+	set category = "Preferences.Game" //CHOMPEdit
 	set desc = "Toggle the additional behaviour of examining things."
 	*/
 	set name = "Режим осмотра"
@@ -852,7 +852,7 @@ CHOMPRemove. Bundled voice sounds into emote/whisper/subtle. Going this extra le
 /client/verb/toggle_multilingual_mode()
 	/* Bastion of Endeavor Translation
 	set name = "Toggle Multilingual Mode"
-	set category = "Preferences"
+	set category = "Preferences.Character" //CHOMPEdit
 	set desc = "Toggle the behaviour of multilingual speech parsing."
 	*/
 	set name = "Режим многоязычия"
@@ -890,7 +890,7 @@ CHOMPRemove. Bundled voice sounds into emote/whisper/subtle. Going this extra le
 /client/proc/toggle_debug_logs()
 	/* Bastion of Endeavor Translation
 	set name = "Toggle Debug Logs"
-	set category = "Preferences"
+	set category = "Preferences.Admin" //CHOMPEdit
 	set desc = "Toggles seeing debug logs."
 	*/
 	set name = "Лог отладки"
@@ -915,7 +915,7 @@ CHOMPRemove. Bundled voice sounds into emote/whisper/subtle. Going this extra le
 /client/proc/toggle_attack_logs()
 	/* Bastion of Endeavor Translation
 	set name = "Toggle Attack Logs"
-	set category = "Preferences"
+	set category = "Preferences.Admin" //CHOMPEdit
 	set desc = "Toggles seeing attack logs."
 	*/
 	set name = "Лог атак"
@@ -940,7 +940,7 @@ CHOMPRemove. Bundled voice sounds into emote/whisper/subtle. Going this extra le
 /client/proc/toggle_admin_global_looc()
 	/* Bastion of Endeavor Translation
 	set name = "Toggle Admin Global LOOC Visibility"
-	set category = "Preferences"
+	set category = "Preferences.Admin" //CHOMPEdit
 	set desc = "Toggles seeing LOOC messages outside your actual LOOC range."
 	*/
 	set name = "Глобальный LOOC"
@@ -964,7 +964,7 @@ CHOMPRemove. Bundled voice sounds into emote/whisper/subtle. Going this extra le
 /client/proc/toggle_admin_deadchat()
 	/* Bastion of Endeavor Translation
 	set name = "Toggle Admin Living Deadchat"
-	set category = "Preferences"
+	set category = "Preferences.Admin" //CHOMPEdit
 	set desc = "Toggles seeing deadchat while not observing."
 	*/
 	set name = "Отображение чата мёртвых в игре"

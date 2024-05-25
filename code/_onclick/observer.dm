@@ -3,12 +3,16 @@
 	/* Bastion of Endeavor Translation
 	set name = "Toggle Inquisitiveness"
 	set desc = "Sets whether your ghost examines everything on click by default"
+<<<<<<< HEAD
 	set category = "Ghost"
 	*/
 	set name = "Переключить любознательность"
 	set desc = "Переключить осмотр вашим призраком всего, на что вы нажимаете."
 	set category = "Призрак"
 	// End of Bastion of Endeavor Translation
+=======
+	set category = "Ghost.Settings" //CHOMPEdit
+>>>>>>> e28fa96705 (Tg panel patch 2 (#8085))
 	if(!client) return
 	client.inquisitive_ghost = !client.inquisitive_ghost
 	if(client.inquisitive_ghost)
