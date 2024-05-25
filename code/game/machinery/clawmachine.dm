@@ -66,7 +66,20 @@
 						/obj/item/toy/plushie/borgplushie/drake/jani,
 						/obj/item/toy/plushie/borgplushie/drake/trauma,
 						/obj/item/toy/plushie/otter,
+<<<<<<< HEAD
 						/obj/item/toy/plushie/shark
+=======
+						/obj/item/toy/plushie/shark,
+						//CHOMPStation Add Start
+						/obj/item/toy/plushie/red_dragon,
+						/obj/item/toy/plushie/green_dragon,
+						/obj/item/toy/plushie/purple_dragon,
+						/obj/item/toy/plushie/white_eastdragon,
+						/obj/item/toy/plushie/red_eastdragon,
+						/obj/item/toy/plushie/green_eastdragon,
+						/obj/item/toy/plushie/gold_eastdragon
+						//CHOMPStation Add End
+>>>>>>> 734d93f841 (Dragon Plushies! Part Deux (#8408))
 						)
 
 /obj/machinery/clawmachine/update_icon()

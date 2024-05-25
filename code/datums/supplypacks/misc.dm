@@ -94,6 +94,18 @@
 			/obj/item/toy/plushie/teshari/b_yw,
 			/obj/item/toy/plushie/teshari/y_yw)
 			//YawnWider Add End
+<<<<<<< HEAD
+=======
+			//CHOMPStation Add Start
+			/obj/item/toy/plushie/red_dragon,
+			/obj/item/toy/plushie/green_dragon,
+			/obj/item/toy/plushie/purple_dragon,
+			/obj/item/toy/plushie/white_eastdragon,
+			/obj/item/toy/plushie/red_eastdragon,
+			/obj/item/toy/plushie/green_eastdragon
+			//CHOMPStation Add End
+			)
+>>>>>>> 734d93f841 (Dragon Plushies! Part Deux (#8408))
 	name = "Plushies Crate"
 	cost = 15
 	containertype = /obj/structure/closet/crate/allico
