@@ -46,11 +46,14 @@ export const ChatPageSettings = (props) => {
         </Stack.Item>
         <Stack.Item>
           <Button.Checkbox
+<<<<<<< HEAD
             /* Bastion of Endeavor Translation
             content="Mute"
             */
             content="Заглушить"
             /* End of Bastion of Endeavor Translation */
+=======
+>>>>>>> 089ba29c49 ([MIRROR] more ui fixes... (#8411))
             checked={page.hideUnreadCount}
             icon={page.hideUnreadCount ? 'bell-slash' : 'bell'}
             /* Bastion of Endeavor Translation
@@ -66,7 +69,9 @@ export const ChatPageSettings = (props) => {
                 }),
               )
             }
-          />
+          >
+            Mute
+          </Button.Checkbox>
         </Stack.Item>
         {!page.isMain ? (
           <Stack.Item>

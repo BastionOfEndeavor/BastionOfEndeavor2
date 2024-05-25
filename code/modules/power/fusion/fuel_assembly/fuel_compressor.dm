@@ -12,6 +12,10 @@
 /obj/machinery/fusion_fuel_compressor/Initialize()
 	. = ..()
 	default_apply_parts()
+<<<<<<< HEAD
+=======
+	verbs -= /obj/machinery/fusion_fuel_compressor/verb/eject_sheet //CHOMPAdd
+>>>>>>> 089ba29c49 ([MIRROR] more ui fixes... (#8411))
 
 /obj/machinery/fusion_fuel_compressor/MouseDrop_T(var/atom/movable/target, var/mob/user)
 	if(user.incapacitated() || !user.Adjacent(src))

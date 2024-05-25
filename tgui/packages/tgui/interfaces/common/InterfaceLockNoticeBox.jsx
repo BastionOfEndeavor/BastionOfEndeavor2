@@ -44,18 +44,23 @@ export const InterfaceLockNoticeBox = (props) => {
               m={0}
               color={locked ? 'red' : 'green'}
               icon={locked ? 'lock' : 'unlock'}
+<<<<<<< HEAD
               /* Bastion of Endeavor Translation
               content={locked ? 'Locked' : 'Unlocked'}
               */
               content={locked ? 'Активна' : 'Отключена'}
               /* End of Bastion of Endeavor Translation */
+=======
+>>>>>>> 089ba29c49 ([MIRROR] more ui fixes... (#8411))
               disabled={preventLocking}
               onClick={() => {
                 if (onLockStatusChange) {
                   onLockStatusChange(!locked);
                 }
               }}
-            />
+            >
+              {locked ? 'Locked' : 'Unlocked'}
+            </Button>
           </Flex.Item>
         </Flex>
       </NoticeBox>
