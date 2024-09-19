@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 //Toggles for preferences, normal clients
 /client/verb/toggle_ghost_ears()
 	/* Bastion of Endeavor Translation
@@ -374,6 +375,8 @@
 
 	feedback_add_details("admin_verb","TJukebox") //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!
 
+=======
+>>>>>>> 2986497a43 ([MIRROR] Revert "Revert "/tg/ preference datums part 1: take two"" (#8929))
 /client/verb/toggle_be_special(role in be_special_flags)
 	/* Bastion of Endeavor Translation
 	set name = "Toggle Special Role Candidacy"
@@ -399,6 +402,7 @@
 
 	feedback_add_details("admin_verb","TBeSpecial") //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!
 
+<<<<<<< HEAD
 /client/verb/toggle_air_pump_hum()
 	/* Bastion of Endeavor Translation
 	set name = "Toggle Air Vent Noise"
@@ -643,6 +647,8 @@
 		Настройка может не сохраниться на следующую смену, если вы измените её ещё раз до конца текущей.")
 	// End of Bastion of Endeavor Translation
 
+=======
+>>>>>>> 2986497a43 ([MIRROR] Revert "Revert "/tg/ preference datums part 1: take two"" (#8929))
 /client/verb/toggle_chat_timestamps()
 	/* Bastion of Endeavor Translation
 	set name = "Toggle Chat Timestamps"
@@ -663,6 +669,7 @@
 	to_chat(src, span_notice("Сообщения в чате [prefs.chat_timestamp ? "теперь" : "больше не"] будут подписаны отметками времени."))
 	// End of Bastion of Endeavor Translation
 
+<<<<<<< HEAD
 /client/verb/toggle_status_indicators()
 	/* Bastion of Endeavor Translation
 	set name = "Toggle Status Indicators"
@@ -798,6 +805,8 @@ CHOMPRemove. Bundled voice sounds into emote/whisper/subtle. Going this extra le
 
 	feedback_add_details("admin_verb","TVoreHealthBars")
 
+=======
+>>>>>>> 2986497a43 ([MIRROR] Revert "Revert "/tg/ preference datums part 1: take two"" (#8929))
 // Not attached to a pref datum because those are strict binary toggles
 /client/verb/toggle_examine_mode()
 	/* Bastion of Endeavor Translation
@@ -856,6 +865,7 @@ CHOMPRemove. Bundled voice sounds into emote/whisper/subtle. Going this extra le
 			to_chat(src, "<span class='filter_system'>Multilingual parsing will enforce the a language delimiter after the delimiter-key combination (,0,galcom -2 still galcom). The extra delimiter will be consumed by the pattern-matching.</span>")
 		if(MULTILINGUAL_OFF)
 			to_chat(src, "<span class='filter_system'>Multilingual parsing is now disabled. Entire messages will be in the language specified at the start of the message.</span>")
+<<<<<<< HEAD
 		*/
 		if(MULTILINGUAL_DEFAULT)
 			to_chat(src, "<span class='filter_system'>При обработке языков теперь требуется только комбинация разделителя-клавиши (,0Общегалактический-2Торговый диалект).</span>")
@@ -968,3 +978,5 @@ CHOMPRemove. Bundled voice sounds into emote/whisper/subtle. Going this extra le
 		SScharacter_setup.queue_preferences_save(prefs)
 
 	feedback_add_details("admin_verb","TADeadchat") //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!
+=======
+>>>>>>> 2986497a43 ([MIRROR] Revert "Revert "/tg/ preference datums part 1: take two"" (#8929))

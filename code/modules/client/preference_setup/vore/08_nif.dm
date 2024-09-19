@@ -5,19 +5,34 @@
 	var/list/nif_savedata
 
 // Definition of the stuff for NIFs
+// Magic bullshit, they're stored separately from everything else
 /datum/category_item/player_setup_item/vore/nif
 	name = "NIF Data"
 	sort_order = 8
 
-/datum/category_item/player_setup_item/vore/nif/load_character(var/savefile/S)
-	S["nif_path"]		>> pref.nif_path
-	S["nif_durability"]	>> pref.nif_durability
-	S["nif_savedata"]	>> pref.nif_savedata
+/proc/nif_savefile_path(ckey)
+	if(!ckey)
+		return
+	return "data/player_saves/[copytext(ckey,1,2)]/[ckey]/nif.json"
 
-/datum/category_item/player_setup_item/vore/nif/save_character(var/savefile/S)
-	S["nif_path"]		<< pref.nif_path
-	S["nif_durability"]	<< pref.nif_durability
-	S["nif_savedata"]	<< pref.nif_savedata
+/datum/category_item/player_setup_item/vore/nif/load_character()
+	var/datum/json_savefile/savefile = new /datum/json_savefile(nif_savefile_path(pref.client_ckey))
+	var/list/save_data_file = savefile.get_entry("character[pref.default_slot]", list())
+
+	pref.nif_path		= save_data_file["nif_path"]
+	pref.nif_durability	= save_data_file["nif_durability"]
+	pref.nif_savedata	= save_data_file["nif_savedata"]
+
+/datum/category_item/player_setup_item/vore/nif/save_character()
+	var/datum/json_savefile/savefile = new /datum/json_savefile(nif_savefile_path(pref.client_ckey))
+	var/list/save_data_file = savefile.get_entry("character[pref.default_slot]", list())
+
+	save_data_file["nif_path"]			= pref.nif_path
+	save_data_file["nif_durability"]	= pref.nif_durability
+	save_data_file["nif_savedata"]		= pref.nif_savedata
+
+	savefile.set_entry("character[pref.default_slot]", save_data_file)
+	savefile.save()
 
 /datum/category_item/player_setup_item/vore/nif/sanitize_character()
 	if(pref.nif_path && !ispath(pref.nif_path))		//We have at least a text string that should be a path.
@@ -46,6 +61,7 @@
 
 /datum/category_item/player_setup_item/vore/nif/copy_to_mob(var/mob/living/carbon/human/character)
 	//If you had a NIF...
+<<<<<<< HEAD
 	if((character.type == /mob/living/carbon/human) && ispath(pref.nif_path) && pref.nif_durability)
 		new pref.nif_path(character,pref.nif_durability,pref.nif_savedata)
 
@@ -67,6 +83,10 @@
 		// End of Bastion of Endeavor Translation
 		S.cd = "/character[pref.default_slot]"
 		save_character(S)
+=======
+	if(istype(character) && ispath(pref.nif_path) && pref.nif_durability)
+		new pref.nif_path(character, pref.nif_durability, pref.nif_savedata)
+>>>>>>> 2986497a43 ([MIRROR] Revert "Revert "/tg/ preference datums part 1: take two"" (#8929))
 
 /datum/category_item/player_setup_item/vore/nif/content(var/mob/user)
 	/* Bastion of Endeavor Translation

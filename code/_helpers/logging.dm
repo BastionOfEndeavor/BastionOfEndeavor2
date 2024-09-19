@@ -83,7 +83,7 @@
 	// End of Bastion of Endeavor Translation
 
 	for(var/client/C in GLOB.admins)
-		if(C.is_preference_enabled(/datum/client_preference/debug/show_debug_logs))
+		if(C.prefs?.read_preference(/datum/preference/toggle/show_debug_logs))
 			to_chat(C,
 					type = MESSAGE_TYPE_DEBUG,
 					/* Bastion of Endeavor Translation

@@ -650,6 +650,26 @@
 /proc/url2htmlloader(url)
 	/* Bastion of Endeavor Unicode Edit: Might be overkill, might not?
 	return {"<html><head><meta http-equiv="refresh" content="0;URL='[url]'"/></head><body onLoad="parent.location='[url]'"></body></html>"}
+<<<<<<< HEAD
 	*/
 	return {"<html><head><meta charset="UTF-8" http-equiv="refresh" content="0;URL='[url]'"/></head><body onLoad="parent.location='[url]'"></body></html>"}
 	// End of Bastion of Endeavor Unicode Edit
+=======
+
+/// Returns a list with all keys turned into paths
+/proc/text2path_list(list/L)
+	. = list()
+	for(var/key in L)
+		var/path = key
+		if(!ispath(path))
+			path = text2path(key)
+		if(!isnull(L[path]))
+			.[path] = L[path]
+			continue
+		if(!isnull(L[key]))
+			.[path] = L[key]
+			continue
+		if(!isnull(path))
+			. += path
+
+>>>>>>> 2986497a43 ([MIRROR] Revert "Revert "/tg/ preference datums part 1: take two"" (#8929))

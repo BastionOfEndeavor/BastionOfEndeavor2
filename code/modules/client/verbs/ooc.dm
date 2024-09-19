@@ -29,8 +29,12 @@
 	msg = sanitize(msg)
 	if(!msg)	return
 
+<<<<<<< HEAD
 	if(!is_preference_enabled(/datum/client_preference/show_ooc))
 		/* Bastion of Endeavor Translation
+=======
+	if(!prefs?.read_preference(/datum/preference/toggle/show_ooc))
+>>>>>>> 2986497a43 ([MIRROR] Revert "Revert "/tg/ preference datums part 1: take two"" (#8929))
 		to_chat(src, "<span class='warning'>You have OOC muted.</span>")
 		*/
 		to_chat(src, "<span class='warning'>У вас на данный момент отключён чат OOC.</span>")
@@ -111,7 +115,7 @@
 	msg = GLOB.is_valid_url.Replace(msg,"<span class='linkify'>$1</span>")
 
 	for(var/client/target in GLOB.clients)
-		if(target.is_preference_enabled(/datum/client_preference/show_ooc))
+		if(target.prefs?.read_preference(/datum/preference/toggle/show_ooc))
 			if(target.is_key_ignored(key)) // If we're ignored by this person, then do nothing.
 				continue
 			var/display_name = src.key
@@ -168,8 +172,12 @@
 	if(!msg)
 		return
 
+<<<<<<< HEAD
 	if(!is_preference_enabled(/datum/client_preference/show_looc))
 		/* Bastion of Endeavor Translation: for some reason it uses a different span, dunno why
+=======
+	if(!prefs?.read_preference(/datum/preference/toggle/show_looc))
+>>>>>>> 2986497a43 ([MIRROR] Revert "Revert "/tg/ preference datums part 1: take two"" (#8929))
 		to_chat(src, "<span class='danger'>You have LOOC muted.</span>")
 		*/
 		to_chat(src, "<span class='warning'>У вас на данный момент отключён чат LOOC.</span>")
@@ -261,7 +269,7 @@
 
 	// Everyone in normal viewing range of the LOOC
 	for(var/mob/viewer in m_viewers)
-		if(viewer.client && viewer.client.is_preference_enabled(/datum/client_preference/show_looc))
+		if(viewer.client && viewer.client.prefs?.read_preference(/datum/preference/toggle/show_looc))
 			receivers |= viewer.client
 		else if(istype(viewer,/mob/observer/eye)) // For AI eyes and the like
 			var/mob/observer/eye/E = viewer
@@ -270,7 +278,7 @@
 
 	// Admins with RLOOC displayed who weren't already in
 	for(var/client/admin in GLOB.admins)
-		if(!(admin in receivers) && admin.is_preference_enabled(/datum/client_preference/holder/show_rlooc))
+		if(!(admin in receivers) && admin.prefs?.read_preference(/datum/preference/toggle/holder/show_rlooc))
 			if(check_rights(R_ADMIN|R_SERVER, FALSE, admin)) //Stop rLOOC showing for retired staff //CHOMPEdit, admins should see LOOC
 				r_receivers |= admin
 

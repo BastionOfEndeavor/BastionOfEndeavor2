@@ -8,6 +8,7 @@
 	var/job_other_med = 0
 	var/job_other_high = 0
 
+<<<<<<< HEAD
 /client/verb/toggle_random_emote_pitch()
 	/* Bastion of Endeavor Translation: I hate this
 	set name = "Toggle Random Emote Pitch"
@@ -58,6 +59,8 @@
 
 	feedback_add_details("admin_verb","TAutoTranscore") //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!
 
+=======
+>>>>>>> 2986497a43 ([MIRROR] Revert "Revert "/tg/ preference datums part 1: take two"" (#8929))
 /datum/preferences/proc/vanity_copy_to(var/mob/living/carbon/human/character, var/copy_name, var/copy_flavour = TRUE, var/copy_ooc_notes = FALSE, var/convert_to_prosthetics = FALSE)
 	//snowflake copy_to, does not copy anything but the vanity things
 	//does not check if the name is the same, do that in any proc that calls this proc

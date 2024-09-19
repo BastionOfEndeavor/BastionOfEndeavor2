@@ -25,6 +25,7 @@
 	var/job_talon_low = 0
 
 //Why weren't these in game toggles already?
+<<<<<<< HEAD
 /client/verb/toggle_eating_noises()
 	/* Bastion of Endeavor Translation
 	set name = "Toggle Eating Noises"
@@ -176,6 +177,8 @@
 
 	feedback_add_details("admin_verb","TGhostSeeWhisSubtle") //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!
 
+=======
+>>>>>>> 2986497a43 ([MIRROR] Revert "Revert "/tg/ preference datums part 1: take two"" (#8929))
 /client/verb/toggle_capture_crystal()
 	/* Bastion of Endeavor Translation
 	set name = "Toggle Catchable"
@@ -208,6 +211,7 @@
 	SScharacter_setup.queue_preferences_save(prefs)
 
 	feedback_add_details("admin_verb","TCaptureCrystal") //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!
+<<<<<<< HEAD
 
 /client/verb/toggle_mentorhelp_ping()
 	/* Bastion of Endeavor Translation
@@ -300,3 +304,5 @@
 	*/
 	to_chat(src, "Вы [ (is_preference_enabled(pref_path)) ? "теперь" : "больше не"] будете получать статус 'Отошёл' (AFK) при длительном бездействии.")
 	// End of Bastion of Endeavor Translation
+=======
+>>>>>>> 2986497a43 ([MIRROR] Revert "Revert "/tg/ preference datums part 1: take two"" (#8929))
