@@ -710,6 +710,7 @@ var/global/list/remainless_species = list(SPECIES_PROMETHEAN,
 				SPECIES_SHADEKIN)			//Shadefluffers just poof away
 
 /var/global/list/alt_titles_with_icons = list(
+<<<<<<< HEAD
 				/* Bastion of Endeavor Translation
 				"Virologist",
 				"Apprentice Engineer",
@@ -733,6 +734,18 @@ var/global/list/remainless_species = list(SPECIES_PROMETHEAN,
 				"Электрик",
 				"Бариста")
 				// End of Bastion of Endeavor Translation
+=======
+				JOB_ALT_VIROLOGIST,
+				JOB_ALT_APPRENTICE_ENGINEER,
+				JOB_ALT_MEDICAL_INTERN,
+				JOB_ALT_RESEARCH_INTERN,
+				JOB_ALT_SECURITY_CADET,
+				JOB_ALT_JR_CARGO_TECH,
+				JOB_ALT_JR_EXPLORER, //CHOMP explo keep
+				JOB_ALT_SERVER,
+				JOB_ALT_ELECTRICIAN,
+				JOB_ALT_BARISTA)
+>>>>>>> 4153768ba1 ([MIRROR] Job rank and radio channel rework (#8965))
 
 /var/global/list/existing_solargrubs = list()
 

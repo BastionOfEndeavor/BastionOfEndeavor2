@@ -214,11 +214,15 @@
 		if((pref.job_civilian_low & ASSISTANT) && job.type != /datum/job/assistant)
 			. += "<font color=grey>[rank]</font></a></td><td></td></tr>"
 			continue
+<<<<<<< HEAD
 		/* Bastion of Endeavor Translation
 		if((rank in SSjob.get_job_titles_in_department(DEPARTMENT_COMMAND) ) || (rank == "AI"))//Bold head jobs
 		*/
 		if((rank in SSjob.get_job_titles_in_department(DEPARTMENT_COMMAND) ) || (rank == "ИИ"))//Bold head jobs
 		// End of Bastion of Endeavor Translation
+=======
+		if((rank in SSjob.get_job_titles_in_department(DEPARTMENT_COMMAND) ) || (rank == JOB_AI))//Bold head jobs
+>>>>>>> 4153768ba1 ([MIRROR] Job rank and radio channel rework (#8965))
 			. += "<b>[rank]</b></a>"
 		else
 			. += "[rank]</a>"

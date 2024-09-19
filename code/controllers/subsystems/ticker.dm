@@ -515,11 +515,15 @@ var/global/datum/controller/subsystem/ticker/ticker
 	var/captainless=1
 	for(var/mob/living/carbon/human/player in player_list)
 		if(player && player.mind && player.mind.assigned_role)
+<<<<<<< HEAD
 			/* Bastion of Endeavor Translation
 			if(player.mind.assigned_role == "Site Manager")
 			*/
 			if(player.mind.assigned_role == "Менеджер объекта")
 			// End of Bastion of Endeavor Translation
+=======
+			if(player.mind.assigned_role == JOB_SITE_MANAGER)
+>>>>>>> 4153768ba1 ([MIRROR] Job rank and radio channel rework (#8965))
 				captainless=0
 			if(!player_is_antag(player.mind, only_offstation_roles = 1))
 				job_master.EquipRank(player, player.mind.assigned_role, 0)

@@ -217,33 +217,45 @@
 	else if(href_list["set_medical_records"])
 		/* Bastion of Endeavor Translation: Bastion of Endeavor TODO: Job bans and such
 		var/new_medical = strip_html_simple(tgui_input_text(user,"Enter medical information here.","Character Preference", html_decode(pref.med_record), MAX_RECORD_LENGTH, TRUE, prevent_enter = TRUE), MAX_RECORD_LENGTH)
+<<<<<<< HEAD
 		if(new_medical && !jobban_isbanned(user, "Records") && CanUseTopic(user))
 		*/
 		var/new_medical = strip_html_simple(tgui_input_text(user,"Введите медицинские записи вашего персонажа.","Медицинские записи", html_decode(pref.med_record), MAX_RECORD_LENGTH, TRUE, prevent_enter = TRUE), MAX_RECORD_LENGTH)
 		if(new_medical && !jobban_isbanned(user, "Records") && CanUseTopic(user))
 		// End of Bastion of Endeavor Translation
+=======
+		if(new_medical && !jobban_isbanned(user, JOB_RECORDS) && CanUseTopic(user))
+>>>>>>> 4153768ba1 ([MIRROR] Job rank and radio channel rework (#8965))
 			pref.med_record = new_medical
 		return TOPIC_REFRESH
 
 	else if(href_list["set_general_records"])
 		/* Bastion of Endeavor Translation
 		var/new_general = strip_html_simple(tgui_input_text(user,"Enter employment information here.","Character Preference", html_decode(pref.gen_record), MAX_RECORD_LENGTH, TRUE, prevent_enter = TRUE), MAX_RECORD_LENGTH)
+<<<<<<< HEAD
 		if(new_general && !jobban_isbanned(user, "Records") && CanUseTopic(user))
 		*/
 		var/new_general = strip_html_simple(tgui_input_text(user,"Введите записи о трудоустройстве вашего персонажа.","Записи о трудоустройстве", html_decode(pref.gen_record), MAX_RECORD_LENGTH, TRUE, prevent_enter = TRUE), MAX_RECORD_LENGTH)
 		if(new_general && !jobban_isbanned(user, "Records") && CanUseTopic(user))
 		// End of Bastion of Endeavor Translation
+=======
+		if(new_general && !jobban_isbanned(user, JOB_RECORDS) && CanUseTopic(user))
+>>>>>>> 4153768ba1 ([MIRROR] Job rank and radio channel rework (#8965))
 			pref.gen_record = new_general
 		return TOPIC_REFRESH
 
 	else if(href_list["set_security_records"])
 		/* Bastion of Endeavor Translation
 		var/sec_medical = strip_html_simple(tgui_input_text(user,"Enter security information here.","Character Preference", html_decode(pref.sec_record), MAX_RECORD_LENGTH, TRUE, prevent_enter = TRUE), MAX_RECORD_LENGTH)
+<<<<<<< HEAD
 		if(sec_medical && !jobban_isbanned(user, "Records") && CanUseTopic(user))
 		*/
 		var/sec_medical = strip_html_simple(tgui_input_text(user,"Введите записи службы безопасности о вашем персонаже.","Записи службы безопасности", html_decode(pref.sec_record), MAX_RECORD_LENGTH, TRUE, prevent_enter = TRUE), MAX_RECORD_LENGTH)
 		if(sec_medical && !jobban_isbanned(user, "Records") && CanUseTopic(user))
 		// End of Bastion of Endeavor Translation
+=======
+		if(sec_medical && !jobban_isbanned(user, JOB_RECORDS) && CanUseTopic(user))
+>>>>>>> 4153768ba1 ([MIRROR] Job rank and radio channel rework (#8965))
 			pref.sec_record = sec_medical
 		return TOPIC_REFRESH
 

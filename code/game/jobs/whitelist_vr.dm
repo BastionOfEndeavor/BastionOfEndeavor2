@@ -22,7 +22,7 @@ GLOBAL_LIST_EMPTY(job_whitelist) // CHOMPEdit - Managed Globals
 	var/datum/job/job = job_master.GetJob(rank)
 	if(!job.whitelist_only)
 		return 1
-	if(rank == USELESS_JOB) //VOREStation Edit - Visitor not Assistant
+	if(rank == JOB_ALT_VISITOR) //VOREStation Edit - Visitor not Assistant
 		return 1
 	if(check_rights(R_ADMIN, 0) || check_rights(R_DEBUG, 0) || check_rights(R_EVENT, 0)) // CHOMPedit
 		return 1
@@ -42,6 +42,7 @@ GLOBAL_LIST_EMPTY(job_whitelist) // CHOMPEdit - Managed Globals
 			if(findtext_char(s,"[M.ckey] - Все"))
 			// End of Bastion of Endeavor Translation
 				return 1
+	return 0
 
 //ChompEDIT START - admin reload buttons
 /client/proc/reload_jobwhitelist()

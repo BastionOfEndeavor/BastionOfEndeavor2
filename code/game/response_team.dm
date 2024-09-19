@@ -110,8 +110,12 @@ var/silent_ert = 0
 			to_chat(usr, "На станцию не был отправлен отряд быстрого реагирования.")
 			// End of Bastion of Endeavor Translation
 			return
+<<<<<<< HEAD
 		/* Bastion of Endeavor Translation: Bastion of Endeavor TODO: Might come back to this after admin stuff is localized or something I'm not sure
 		if(jobban_isbanned(usr, "Syndicate") || jobban_isbanned(usr, "Emergency Response Team") || jobban_isbanned(usr, "Security Officer"))
+=======
+		if(jobban_isbanned(usr, JOB_SYNDICATE) || jobban_isbanned(usr, JOB_EMERGENCY_RESPONSE_TEAM) || jobban_isbanned(usr, JOB_SECURITY_OFFICER))
+>>>>>>> 4153768ba1 ([MIRROR] Job rank and radio channel rework (#8965))
 			to_chat(usr, "<span class='danger'>You are jobbanned from the emergency reponse team!</span>")
 		*/
 		if(jobban_isbanned(usr, "Syndicate") || jobban_isbanned(usr, "Emergency Response Team") || jobban_isbanned(usr, "Security Officer"))

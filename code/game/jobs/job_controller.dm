@@ -10,11 +10,15 @@ var/global/datum/controller/occupations/job_master
 		//Cache of icons for job info window
 	var/list/job_icons = list()
 
+<<<<<<< HEAD
 /* Bastion of Endeavor Translation
 /datum/controller/occupations/proc/SetupOccupations(var/faction = "Station")
 */
 /datum/controller/occupations/proc/SetupOccupations(var/faction = "Станция")
 // End of Bastion of Endeavor Translation
+=======
+/datum/controller/occupations/proc/SetupOccupations(var/faction = FACTION_STATION)
+>>>>>>> 4153768ba1 ([MIRROR] Job rank and radio channel rework (#8965))
 	occupations = list()
 	//var/list/all_jobs = typesof(/datum/job)
 	var/list/all_jobs = list(/datum/job/assistant) | using_map.allowed_jobs
@@ -200,7 +204,7 @@ var/global/datum/controller/occupations/job_master
 		if(job.is_species_banned(player.client.prefs.species, player.client.prefs.organ_data["brain"]) == TRUE)
 			continue
 
-		if(istype(job, GetJob(USELESS_JOB))) // We don't want to give him assistant, that's boring! //VOREStation Edit - Visitor not Assistant
+		if(istype(job, GetJob(JOB_ALT_VISITOR))) // We don't want to give him assistant, that's boring! //VOREStation Edit - Visitor not Assistant
 			continue
 
 		if(SSjob.is_job_in_department(job.title, DEPARTMENT_COMMAND)) //If you want a command position, select it!
@@ -326,11 +330,15 @@ var/global/datum/controller/occupations/job_master
 	//Holder for Triumvirate is stored in the ticker, this just processes it
 	if(ticker && ticker.triai)
 		for(var/datum/job/A in occupations)
+<<<<<<< HEAD
 			/* Bastion of Endeavor Translation
 			if(A.title == "AI")
 			*/
 			if(A.title == "Искусственный интеллект")
 			// End of Bastion of Endeavor Translation
+=======
+			if(A.title == JOB_AI)
+>>>>>>> 4153768ba1 ([MIRROR] Job rank and radio channel rework (#8965))
 				A.spawn_positions = 3
 				break
 
@@ -367,10 +375,14 @@ var/global/datum/controller/occupations/job_master
 	for(var/mob/new_player/player in assistant_candidates)
 		/* Bastion of Endeavor Translation
 		Debug("AC1 pass, Player: [player]")
+<<<<<<< HEAD
 		*/
 		Debug("Проверка ассистентов 1 пройдена, игрок: [player]")
 		// End of Bastion of Endeavor Translation
 		AssignRole(player, USELESS_JOB) //VOREStation Edit - Visitor not Assistant
+=======
+		AssignRole(player, JOB_ALT_VISITOR) //VOREStation Edit - Visitor not Assistant
+>>>>>>> 4153768ba1 ([MIRROR] Job rank and radio channel rework (#8965))
 		assistant_candidates -= player
 	/* Bastion of Endeavor Translation
 	Debug("DO, AC1 end")
@@ -498,10 +510,14 @@ var/global/datum/controller/occupations/job_master
 		if(player.client.prefs.alternate_option == BE_ASSISTANT)
 			/* Bastion of Endeavor Translation
 			Debug("AC2 Assistant located, Player: [player]")
+<<<<<<< HEAD
 			*/
 			Debug("Проверка ассистентов 2, найден ассистент, игрок: [player]")
 			// End of Bastion of Endeavor Translation
 			AssignRole(player, USELESS_JOB) //VOREStation Edit - Visitor not Assistant
+=======
+			AssignRole(player, JOB_ALT_VISITOR) //VOREStation Edit - Visitor not Assistant
+>>>>>>> 4153768ba1 ([MIRROR] Job rank and radio channel rework (#8965))
 
 	//For ones returning to lobby
 	for(var/mob/new_player/player in unassigned)
@@ -701,6 +717,7 @@ var/global/datum/controller/occupations/job_master
 			return H
 
 		// TWEET PEEP
+<<<<<<< HEAD
 		/* Bastion of Endeavor Translation
 		if(rank == "Site Manager" && announce)
 		*/
@@ -712,6 +729,11 @@ var/global/datum/controller/occupations/job_master
 			*/
 			captain_announcement.Announce("Внимание, экипаж! На станцию [verb_ru(H, "прибыл")] [alt_title ? lowertext(alt_title) : "менеджер объекта"] [H.real_name]!", new_sound = announce_sound, zlevel = H.z)
 			// End of Bastion of Endeavor Translation
+=======
+		if(rank == JOB_SITE_MANAGER && announce)
+			var/sound/announce_sound = (ticker.current_state <= GAME_STATE_SETTING_UP) ? null : sound('sound/misc/boatswain.ogg', volume=20)
+			captain_announcement.Announce("All hands, [alt_title ? alt_title : JOB_SITE_MANAGER] [H.real_name] on deck!", new_sound = announce_sound, zlevel = H.z)
+>>>>>>> 4153768ba1 ([MIRROR] Job rank and radio channel rework (#8965))
 
 		//Deferred item spawning.
 		if(spawn_in_storage && spawn_in_storage.len)
