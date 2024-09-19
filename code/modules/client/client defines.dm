@@ -184,3 +184,6 @@
 	var/last_move_dir_pressed = NONE
 
 	#endif
+
+	/// If this client has been fully initialized or not
+	var/fully_created = FALSE
