@@ -30,11 +30,7 @@ SUBSYSTEM_DEF(job)
 	//CHOMPadd end
 	return SS_INIT_SUCCESS // CHOMPEdit
 
-/* Bastion of Endeavor Translation
-/datum/controller/subsystem/job/proc/setup_occupations(faction = "Station")
-*/
-/datum/controller/subsystem/job/proc/setup_occupations(faction = "Станция")
-// End of Bastion of Endeavor Translation
+/datum/controller/subsystem/job/proc/setup_occupations(faction = FACTION_STATION)
 	occupations = list()
 	var/list/all_jobs = subtypesof(/datum/job)
 	if(!all_jobs.len)
