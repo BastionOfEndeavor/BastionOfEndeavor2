@@ -191,7 +191,7 @@ SUBSYSTEM_DEF(shuttles)
 	overmap_halted = !overmap_halted
 	for(var/obj/effect/overmap/visitable/ship/ship_effect as anything in ships)
 		overmap_halted ? ship_effect.halt() : ship_effect.unhalt()
-//CHOMPEdit Begin
+
 /datum/controller/subsystem/shuttles/stat_entry(msg)
 	/* Bastion of Endeavor Translation
 	msg = "Shuttles:[process_shuttles.len]/[shuttles.len], Ships:[ships.len], L:[registered_shuttle_landmarks.len][overmap_halted ? ", HALT" : ""]"
@@ -199,4 +199,3 @@ SUBSYSTEM_DEF(shuttles)
 	msg = "| Шаттлы: [process_shuttles.len]/[shuttles.len] | Корабли:[ships.len] | Точки: [registered_shuttle_landmarks.len][overmap_halted ? "| СТОП" : ""]"
 	// End of Bastion of Endeavor Translation
 	return ..()
-//CHOMPEdit End

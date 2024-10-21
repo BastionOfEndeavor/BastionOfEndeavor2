@@ -45,7 +45,6 @@ SUBSYSTEM_DEF(alarm)
 /datum/controller/subsystem/alarm/proc/number_of_active_alarms()
 	return active_alarm_cache.len
 
-//CHOMPEdit Begin
 /datum/controller/subsystem/alarm/stat_entry(msg)
 	/* Bastion of Endeavor Translation
 	msg = "[number_of_active_alarms()] alarm\s"
@@ -53,4 +52,3 @@ SUBSYSTEM_DEF(alarm)
 	msg = "| Тревог: [number_of_active_alarms()]"
 	// End of Bastion of Endeavor Translation
 	return ..()
-//CHOMPEdit End

@@ -12,15 +12,19 @@ SUBSYSTEM_DEF(throwing)
 
 	var/list/currentrun
 	var/list/processing = list()
-//CHOMPEdit Begin
+
 /datum/controller/subsystem/throwing/stat_entry(msg)
+<<<<<<< HEAD
 	/* Bastion of Endeavor Translation
 	msg = "P:[length(processing)]"
 	*/
 	msg = "| Обрабатывается: [length(processing)]"
 	// End of Bastion of Endeavor Translation
+=======
+	msg = "P:[processing.len]"
+>>>>>>> 4d9879937f ([MIRROR] Port tg statpanel (#9242))
 	return ..()
-//CHOMPEdit End
+
 /datum/controller/subsystem/throwing/fire(resumed = 0)
 	if (!resumed)
 		src.currentrun = processing.Copy()

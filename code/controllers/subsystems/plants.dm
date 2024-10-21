@@ -26,7 +26,6 @@ SUBSYSTEM_DEF(plants)
 	var/list/processing = list()
 	var/list/currentrun = list()
 
-//CHOMPEdit Begin
 /datum/controller/subsystem/plants/stat_entry(msg)
 	/* Bastion of Endeavor Translation
 	msg = "P:[processing.len]|S:[seeds.len]"
@@ -35,6 +34,7 @@ SUBSYSTEM_DEF(plants)
 	// End of Bastion of Endeavor Translation
 	return ..()
 
+//CHOMPEdit Begin
 /datum/controller/subsystem/plants/Initialize()
 	setup()
 	return SS_INIT_SUCCESS

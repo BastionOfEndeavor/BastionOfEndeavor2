@@ -16,7 +16,6 @@ SUBSYSTEM_DEF(ping)
 	runlevels = RUNLEVEL_LOBBY | RUNLEVELS_DEFAULT
 	var/list/currentrun = list()
 
-//CHOMPEdit Begin
 /datum/controller/subsystem/ping/stat_entry(msg)
 	/* Bastion of Endeavor Translation
 	msg = "P:[GLOB.clients.len]"
@@ -24,7 +23,6 @@ SUBSYSTEM_DEF(ping)
 	msg = "| Подключено: [GLOB.clients.len]"
 	// End of Bastion of Endeavor Translation
 	return ..()
-// CHOMPEdit End
 
 /datum/controller/subsystem/ping/fire(resumed = FALSE)
 	// Prepare the new batch of clients

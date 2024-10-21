@@ -42,7 +42,7 @@ SUBSYSTEM_DEF(supply)
 // Supply shuttle ticker - handles supply point regeneration. Just add points over time.
 /datum/controller/subsystem/supply/fire()
 	points += points_per_process
-//CHOMPEdit Begin
+
 /datum/controller/subsystem/supply/stat_entry(msg)
 	/* Bastion of Endeavor Translation
 	msg = "Points: [points]"
@@ -50,7 +50,7 @@ SUBSYSTEM_DEF(supply)
 	msg = "| Очки: [points]"
 	// End of Bastion of Endeavor Translation
 	return ..()
-//CHOMPEdit End
+
 //To stop things being sent to CentCom which should not be sent to centcomm. Recursively checks for these types.
 /datum/controller/subsystem/supply/proc/forbidden_atoms_check(atom/A)
 	if(isliving(A))

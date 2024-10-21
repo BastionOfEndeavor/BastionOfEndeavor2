@@ -92,7 +92,6 @@ SUBSYSTEM_DEF(inactivity)
 		if (MC_TICK_CHECK)
 			return
 
-//CHOMPEdit Begin
 /datum/controller/subsystem/inactivity/stat_entry(msg)
 	/* Bastion of Endeavor Translation
 	msg = "Kicked: [number_kicked]"
@@ -100,7 +99,6 @@ SUBSYSTEM_DEF(inactivity)
 	msg = "| Кикнуто: [number_kicked]"
 	// End of Bastion of Endeavor Translation
 	return ..()
-//CHOMPEdit End
 
 /datum/controller/subsystem/inactivity/proc/can_kick(var/client/C)
 	if(C.holder) return FALSE //VOREStation Add - Don't kick admins.

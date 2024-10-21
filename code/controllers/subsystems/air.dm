@@ -296,7 +296,6 @@ span_info("<br>\
 		if(MC_TICK_CHECK)
 			return
 
-//CHOMPEdit Begin
 /datum/controller/subsystem/air/stat_entry(msg)
 /* Bastion of Endeavor Translation
 	msg = "S:[current_step ? part_names[current_step] : ""] "
@@ -336,7 +335,6 @@ span_info("<br>\
 	msg += "}"
 // End of Bastion of Endeavor Translation
 	return ..()
-// CHOMPEdit End
 
 // ZAS might displace objects as the map loads if an air tick is processed mid-load.
 /datum/controller/subsystem/air/StartLoadingMap(var/quiet = TRUE)

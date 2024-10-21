@@ -13,7 +13,6 @@ SUBSYSTEM_DEF(aifast)
 	var/list/processing = list()
 	var/list/currentrun = list()
 
-//CHOMPEdit Begin
 /datum/controller/subsystem/aifast/stat_entry(msg)
 	/* Bastion of Endeavor Translation
 	msg = "P:[processing.len]"
@@ -21,7 +20,6 @@ SUBSYSTEM_DEF(aifast)
 	msg = "| Обрабатывается: [processing.len]"
 	// End of Bastion of Endeavor Translation
 	return ..()
-// CHOMPEdit End
 
 /datum/controller/subsystem/aifast/fire(resumed = 0)
 	if (!resumed)

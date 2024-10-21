@@ -11,7 +11,6 @@ SUBSYSTEM_DEF(orbit)
 	var/list/currentrun = list()
 	var/list/processing = list()
 
-//CHOMPEdit Begin
 /datum/controller/subsystem/orbit/stat_entry(msg)
 	/* Bastion of Endeavor Translation
 	msg = "P:[processing.len]"
@@ -19,7 +18,7 @@ SUBSYSTEM_DEF(orbit)
 	msg = "| Обрабатывается: [processing.len]"
 	// End of Bastion of Endeavor Translation
 	return ..()
-//CHOMPEdit End
+
 
 /datum/controller/subsystem/orbit/fire(resumed = 0)
 	if (!resumed)

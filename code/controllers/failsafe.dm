@@ -125,7 +125,7 @@ GLOBAL_REAL(Failsafe, /datum/controller/failsafe) // CHOMPEdit - Managed Globals
 /datum/controller/failsafe/proc/defcon_pretty()
 	return defcon
 
-/datum/controller/failsafe/stat_entry(msg) //CHOMPEdit
+/datum/controller/failsafe/stat_entry(msg)
 	if(!statclick)
 		/* Bastion of Endeavor Translation
 		statclick = new/obj/effect/statclick/debug(null, "Initializing...", src)
@@ -133,9 +133,14 @@ GLOBAL_REAL(Failsafe, /datum/controller/failsafe) // CHOMPEdit - Managed Globals
 		statclick = new/obj/effect/statclick/debug(null, "Инициализация...", src)
 		// End of Bastion of Endeavor Translation
 
+<<<<<<< HEAD
 	/* Bastion of Endeavor Translation
 	msg = "Failsafe Controller: [statclick.update("Defcon: [defcon_pretty()] (Interval: [Failsafe.processing_interval] | Iteration: [Failsafe.master_iteration])")]" //CHOMPEdit
 	*/
 	msg = "Проверочный контроллер: [statclick.update("Defcon: [defcon_pretty()] | Интервал: [Failsafe.processing_interval] | Итерация: [Failsafe.master_iteration]")]" //CHOMPEdit
 	// End of Bastion of Endeavor Translation
 	return msg //CHOMPEdit
+=======
+	msg = "Failsafe Controller: [statclick.update("Defcon: [defcon_pretty()] (Interval: [Failsafe.processing_interval] | Iteration: [Failsafe.master_iteration])")]"
+	return msg
+>>>>>>> 4d9879937f ([MIRROR] Port tg statpanel (#9242))

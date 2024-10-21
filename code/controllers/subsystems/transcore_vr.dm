@@ -138,7 +138,6 @@ SUBSYSTEM_DEF(transcore)
 		if(MC_TICK_CHECK)
 			return
 
-//CHOMPEdit Begin
 /datum/controller/subsystem/transcore/stat_entry(msg)
 	msg = "$:{"
 	/* Bastion of Endeavor Translation
@@ -172,7 +171,6 @@ SUBSYSTEM_DEF(transcore)
 		// End of Bastion of Endeavor Translation
 	msg += "} "
 	return ..()
-// CHOMPEdit End
 
 /datum/controller/subsystem/transcore/Recover()
 	for(var/key in SStranscore.databases)

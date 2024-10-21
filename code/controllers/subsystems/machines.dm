@@ -90,7 +90,6 @@ SUBSYSTEM_DEF(machines)
 			T.broadcast_status()
 		CHECK_TICK
 
-//CHOMPEdit Begin
 /datum/controller/subsystem/machines/stat_entry(msg)
 	/* Bastion of Endeavor Translation
 	msg = "C:{"
@@ -118,7 +117,6 @@ SUBSYSTEM_DEF(machines)
 	msg += "МАШ/МС:[round((cost ? SSmachines.processing_machines.len/cost_machinery : 0),0.1)]"
 	// End of Bastion of Endeavor Translation
 	return ..()
-// CHOMPEdit End
 
 /datum/controller/subsystem/machines/proc/process_pipenets(resumed = 0)
 	if (!resumed)

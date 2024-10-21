@@ -39,7 +39,7 @@ SUBSYSTEM_DEF(processing)
 	for(var/datum/D in old_processing)
 		if(CHECK_BITFIELD(D.datum_flags, DF_ISPROCESSING))
 			processing |= D
-//CHOMPEdit Begin
+
 /datum/controller/subsystem/processing/stat_entry(msg)
 	/* Bastion of Endeavor Translation: Yeah
 	msg = "[stat_tag]:[processing.len]"
@@ -47,7 +47,7 @@ SUBSYSTEM_DEF(processing)
 	msg = "[stat_tag]: [processing.len]"
 	// End of Bastion of Endeavor Translation
 	return ..()
-//CHOMPEdit End
+
 /datum/controller/subsystem/processing/fire(resumed = 0)
 	if (!resumed)
 		currentrun = processing.Copy()

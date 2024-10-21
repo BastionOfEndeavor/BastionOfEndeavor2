@@ -837,6 +837,7 @@ GLOBAL_REAL(Master, /datum/controller/master) = new
 
 
 
+<<<<<<< HEAD
 /datum/controller/master/stat_entry(msg) //CHOMPEdit
 	/* Bastion of Endeavor Translation: Removing SOME of these due to repetition elsewhere
 	if(!statclick)
@@ -850,6 +851,14 @@ GLOBAL_REAL(Master, /datum/controller/master) = new
 
 	msg += "Главный контроллер: [statclick.update("Тикрейт: [Master.processing] | Итерация:[Master.iteration]")]" //CHOMPEdit
 	// End of Bastion of Endeavor Translation
+=======
+/datum/controller/master/stat_entry(msg)
+	if(!statclick)
+		statclick = new/obj/effect/statclick/debug(null, "Initializing...", src)
+
+	msg = "Byond: (FPS:[world.fps]) (TickCount:[world.time/world.tick_lag]) (TickDrift:[round(Master.tickdrift,1)]([round((Master.tickdrift/(world.time/world.tick_lag))*100,0.1)]%))"
+	msg += "Master Controller: [statclick.update("(TickRate:[Master.processing]) (Iteration:[Master.iteration])")]"
+>>>>>>> 4d9879937f ([MIRROR] Port tg statpanel (#9242))
 
 	return msg
 

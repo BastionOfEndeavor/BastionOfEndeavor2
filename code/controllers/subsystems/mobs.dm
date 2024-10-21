@@ -23,7 +23,6 @@ SUBSYSTEM_DEF(mobs)
 	var/slept_mobs = 0
 	var/list/process_z = list()
 
-//CHOMPEdit Begin
 /datum/controller/subsystem/mobs/stat_entry(msg)
 	/* Bastion of Endeavor Translation
 	msg = "P: [global.mob_list.len] | S: [slept_mobs]"
@@ -31,7 +30,6 @@ SUBSYSTEM_DEF(mobs)
 	msg = "| Существ: [global.mob_list.len] | Спит: [slept_mobs]"
 	// End of Bastion of Endeavor Translation
 	return ..()
-//CHOMPEdit End
 
 /datum/controller/subsystem/mobs/fire(resumed = 0)
 	if (!resumed)

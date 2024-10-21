@@ -306,6 +306,7 @@
 		return eyeobj
 	return src
 
+<<<<<<< HEAD
 //CHOMPEdit Begin
 /client/verb/fix_stat_panel()
 	/* Bastion of Endeavor Translation
@@ -317,6 +318,8 @@
 
 	init_verbs()
 
+=======
+>>>>>>> 4d9879937f ([MIRROR] Port tg statpanel (#9242))
 /client/verb/fit_viewport()
 	/* Bastion of Endeavor Translation
 	set name = "Fit Viewport"
@@ -410,3 +413,9 @@
 		INVOKE_ASYNC(src, VERB_REF(fit_viewport))
 	else //Delayed to avoid wingets from Login calls.
 		addtimer(CALLBACK(src, VERB_REF(fit_viewport), 1 SECONDS))
+
+/client/verb/fix_stat_panel()
+	set name = "Fix Stat Panel"
+	set hidden = TRUE
+
+	init_verbs()

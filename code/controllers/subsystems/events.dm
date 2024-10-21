@@ -45,7 +45,6 @@ SUBSYSTEM_DEF(events)
 		var/datum/event_container/EC = event_containers[i]
 		EC.process()
 
-//CHOMPEdit Begin
 /datum/controller/subsystem/events/stat_entry(msg)
 	/* Bastion of Endeavor Translation
 	msg = "E:[active_events.len]"
@@ -53,7 +52,6 @@ SUBSYSTEM_DEF(events)
 	msg = "| Активных событий: [active_events.len]"
 	// End of Bastion of Endeavor Translation
 	return ..()
-//CHOMPEdit End
 
 /datum/controller/subsystem/events/Recover()
 	if(SSevents.active_events)

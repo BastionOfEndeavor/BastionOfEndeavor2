@@ -244,7 +244,6 @@
 // CHOMPEdit End
 
 //hook for printing stats to the "MC" statuspanel for admins to see performance and related stats etc.
-//CHOMPEdit Begin
 /datum/controller/subsystem/stat_entry(msg)
 	/* Bastion of Endeavor Translation
 	if(can_fire && !(SS_NO_FIRE & flags))
@@ -258,7 +257,6 @@
 		msg = "ПОДСИСТЕМА ОТКЛЮЧЕНА\t[msg]"
 	// End of Bastion of Endeavor Translation
 	return msg
-//CHOMPEdit End
 
 /datum/controller/subsystem/proc/state_letter()
 	switch (state)
