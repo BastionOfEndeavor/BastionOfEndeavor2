@@ -1,11 +1,11 @@
 
-#define MIDDLE_CLICK 0
-#define ALT_CLICK 1
-#define CTRL_CLICK 2
+#define HARDSUIT_MIDDLE_CLICK 0
+#define HARDSUIT_ALT_CLICK 1
+#define HARDSUIT_CTRL_CLICK 2
 #define MAX_HARDSUIT_CLICK_MODE 2
 
 /client
-	var/hardsuit_click_mode = MIDDLE_CLICK
+	var/hardsuit_click_mode = HARDSUIT_MIDDLE_CLICK
 
 /client/verb/toggle_hardsuit_mode()
 	/* Bastion of Endeavor Translation: Bastion of Endeavor TODO: Wouldn't RIG be a better word?
@@ -23,6 +23,7 @@
 		hardsuit_click_mode = 0
 
 	switch(hardsuit_click_mode)
+<<<<<<< HEAD
 		if(MIDDLE_CLICK)
 			/* Bastion of Endeavor Translation
 			to_chat(src, "Hardsuit activation mode set to middle-click.")
@@ -37,6 +38,13 @@
 			// End of Bastion of Endeavor Translation
 		if(CTRL_CLICK)
 			/* Bastion of Endeavor Translation
+=======
+		if(HARDSUIT_MIDDLE_CLICK)
+			to_chat(src, "Hardsuit activation mode set to middle-click.")
+		if(HARDSUIT_ALT_CLICK)
+			to_chat(src, "Hardsuit activation mode set to alt-click.")
+		if(HARDSUIT_CTRL_CLICK)
+>>>>>>> cb45bebdc3 ([MIRROR] General improvements to Action Buttons (#9250))
 			to_chat(src, "Hardsuit activation mode set to control-click.")
 			*/
 			to_chat(src, "Активация жёсткого скафандра установлена на Ctrl+ЛКМ.")
@@ -46,26 +54,30 @@
 			/* Bastion of Endeavor Translation
 			soft_assert(0, "Bad hardsuit click mode: [hardsuit_click_mode] - expected 0 to [MAX_HARDSUIT_CLICK_MODE]")
 			to_chat(src, "Somehow you bugged the system. Setting your hardsuit mode to middle-click.")
+<<<<<<< HEAD
 			*/
 			soft_assert(0, "Недопустимый режим активации жёсткого скафандра: [hardsuit_click_mode] – ожидалось значение от 0 до [MAX_HARDSUIT_CLICK_MODE]")
 			to_chat(src, "Вы каким-то образом сломали систему. Активация жёсткого скафандра установлена на среднюю кнопку мыши.")
 			// End of Bastion of Endeavor Translation
 			hardsuit_click_mode = MIDDLE_CLICK
+=======
+			hardsuit_click_mode = HARDSUIT_MIDDLE_CLICK
+>>>>>>> cb45bebdc3 ([MIRROR] General improvements to Action Buttons (#9250))
 
 /mob/living/MiddleClickOn(atom/A)
-	if(client && client.hardsuit_click_mode == MIDDLE_CLICK)
+	if(client && client.hardsuit_click_mode == HARDSUIT_MIDDLE_CLICK)
 		if(HardsuitClickOn(A))
 			return
 	..()
 
 /mob/living/AltClickOn(atom/A)
-	if(client && client.hardsuit_click_mode == ALT_CLICK)
+	if(client && client.hardsuit_click_mode == HARDSUIT_ALT_CLICK)
 		if(HardsuitClickOn(A))
 			return
 	..()
 
 /mob/living/CtrlClickOn(atom/A)
-	if(client && client.hardsuit_click_mode == CTRL_CLICK)
+	if(client && client.hardsuit_click_mode == HARDSUIT_CTRL_CLICK)
 		if(HardsuitClickOn(A))
 			return
 	..()
@@ -105,7 +117,7 @@
 		return 1
 	return 0
 
-#undef MIDDLE_CLICK
-#undef ALT_CLICK
-#undef CTRL_CLICK
+#undef HARDSUIT_MIDDLE_CLICK
+#undef HARDSUIT_ALT_CLICK
+#undef HARDSUIT_CTRL_CLICK
 #undef MAX_HARDSUIT_CLICK_MODE
