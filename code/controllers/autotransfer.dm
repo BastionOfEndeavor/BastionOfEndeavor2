@@ -20,11 +20,15 @@ var/datum/controller/transfer_controller/transfer_controller
 	//VOREStation Edit START
 	if (round_duration_in_ds >= shift_last_vote - 2 MINUTES)
 		shift_last_vote = 1000000000000 //Setting to a stupidly high number since it'll be not used again. //CHOMPEdit
+<<<<<<< HEAD
 		/* Bastion of Endeavor Translation
 		to_world("<b>Warning: This upcoming round-extend vote will be your last chance to vote for shift extension. Wrap up your scenes in the next 60 minutes if the round is extended.</b>") //CHOMPStation Edit
 		*/
 		to_world("<b>Внимание: следующее голосование за продление раунда будет последним. В случае продления раунда постарайтесь завершить свои сцены в течение следующих 60 минут.</b>") //CHOMPStation Edit
 		// End of Bastion of Endeavor Translation
+=======
+		to_world(span_world(span_notice("Warning: This upcoming round-extend vote will be your last chance to vote for shift extension. Wrap up your scenes in the next 60 minutes if the round is extended."))) //CHOMPStation Edit
+>>>>>>> 7416cbea22 ([MIRROR] next set of spans (#9247))
 	if (round_duration_in_ds >= shift_hard_end - 1 MINUTE)
 		init_shift_change(null, 1)
 		shift_hard_end = timerbuffer + CONFIG_GET(number/vote_autotransfer_interval) //If shuttle somehow gets recalled, let's force it to call again next time a vote would occur. // CHOMPEdit

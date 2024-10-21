@@ -38,13 +38,17 @@
 
 /* Bastion of Endeavor Edit: 
 /datum/category_item/player_setup_item/volume_sliders/media/content(var/mob/user)
+<<<<<<< HEAD
 */
 /datum/category_item/player_setup_item/player_global/media/content(var/mob/user)
 // End of Bastion of Endeavor Edit
 	/* Bastion of Endeavor Translation
 	. += "<b>Jukebox Volume:</b>"
+=======
+	. += span_bold("Jukebox Volume:")
+>>>>>>> 7416cbea22 ([MIRROR] next set of spans (#9247))
 	. += "<a href='?src=\ref[src];change_media_volume=1'><b>[round(pref.media_volume * 100)]%</b></a><br>"
-	. += "<b>Media Player Type:</b> Depending on you operating system, one of these might work better. "
+	. += span_bold("Media Player Type:") + " Depending on you operating system, one of these might work better. "
 	. += "Use HTML5 if it works for you. If neither HTML5 nor WMP work, you'll have to fall back to using VLC, "
 	. += "but this requires you have the VLC client installed on your comptuer."
 	. += "Try the others if you want but you'll probably just get no music.<br>"

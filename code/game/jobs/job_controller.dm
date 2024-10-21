@@ -15,11 +15,15 @@ var/global/datum/controller/occupations/job_master
 	//var/list/all_jobs = typesof(/datum/job)
 	var/list/all_jobs = list(/datum/job/assistant) | using_map.allowed_jobs
 	if(!all_jobs.len)
+<<<<<<< HEAD
 		/* Bastion of Endeavor Translation
 		to_world(span_warning("Error setting up jobs, no job datums found!"))
 		*/
 		to_world(span_warning("Ошибка при инициализации работ: не найдены датумы работ!"))
 		// End of Bastion of Endeavor Translation
+=======
+		to_world(span_boldannounce("Error setting up jobs, no job datums found!"))
+>>>>>>> 7416cbea22 ([MIRROR] next set of spans (#9247))
 		return 0
 	for(var/J in all_jobs)
 		var/datum/job/job = new J()
@@ -669,6 +673,7 @@ var/global/datum/controller/occupations/job_master
 		for(var/D in job.department_accounts)
 			var/datum/money_account/department_account = department_accounts[D]
 			if(department_account)
+<<<<<<< HEAD
 				/* Bastion of Endeavor Translation
 				remembered_info += "<b>Department account number ([D]):</b> #[department_account.account_number]<br>"
 				remembered_info += "<b>Department account pin ([D]):</b> [department_account.remote_access_pin]<br>"
@@ -678,6 +683,11 @@ var/global/datum/controller/occupations/job_master
 				remembered_info += "<b>Пароль счёта отдела ([D]):</b> [department_account.remote_access_pin]<br>"
 				remembered_info += "<b>Баланс счёта отдела ([D]):</b> $[department_account.money]<br>"
 				// End of Bastion of Endeavor Translation
+=======
+				remembered_info += span_bold("Department account number ([D]):") + " #[department_account.account_number]<br>"
+				remembered_info += span_bold("Department account pin ([D]):") + " [department_account.remote_access_pin]<br>"
+				remembered_info += span_bold("Department account funds ([D]):") + " $[department_account.money]<br>"
+>>>>>>> 7416cbea22 ([MIRROR] next set of spans (#9247))
 
 		H.mind.store_memory(remembered_info)
 
@@ -746,6 +756,7 @@ var/global/datum/controller/occupations/job_master
 				W.color = R.color
 				qdel(R)
 
+<<<<<<< HEAD
 	/* Bastion of Endeavor Translation
 	to_chat(H, span_filter_notice("<B>You are [job.total_positions == 1 ? "the" : "a"] [alt_title ? alt_title : rank].</B>"))
 	*/
@@ -772,6 +783,18 @@ var/global/datum/controller/occupations/job_master
 		*/
 		to_chat(H, span_filter_notice("<b>Ваша должность важна для развития раунда. Если вам необходимо резко отключиться, просьба предварительно сообщить администраторам через глагол Помощь администратора (F1).</b>"))
 		// End of Bastion of Endeavor Translation
+=======
+	to_chat(H, span_filter_notice(span_bold("You are [job.total_positions == 1 ? "the" : "a"] [alt_title ? alt_title : rank].")))
+
+	if(job.supervisors)
+		to_chat(H, span_filter_notice(span_bold("As the [alt_title ? alt_title : rank] you answer directly to [job.supervisors]. Special circumstances may change this.")))
+	if(job.has_headset)
+		H.equip_to_slot_or_del(new /obj/item/radio/headset(H), slot_l_ear)
+		to_chat(H, span_filter_notice(span_bold("To speak on your department's radio channel use :h. For the use of other channels, examine your headset.")))
+
+	if(job.req_admin_notify)
+		to_chat(H, span_filter_notice(span_bold("You are playing a job that is important for Game Progression. If you have to disconnect, please notify the admins via adminhelp.")))
+>>>>>>> 7416cbea22 ([MIRROR] next set of spans (#9247))
 
 	// EMAIL GENERATION
 	// Email addresses will be created under this domain name. Mostly for the looks.

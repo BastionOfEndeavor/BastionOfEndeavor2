@@ -3,6 +3,7 @@
 	set name = "Who"
 	set category = "OOC.Resources" //CHOMPEdit
 
+<<<<<<< HEAD
 	var/msg = "<b>Current Players:</b>\n"
 	*/
 	set name = "Кто онлайн"
@@ -10,6 +11,9 @@
 	set desc = "Показать, кто сейчас подключён к серверу."
 	var/msg = "<b>Игроки онлайн:</b>\n"
 	// End of Bastion of Endeavor Translation
+=======
+	var/msg = span_bold("Current Players:") + "\n"
+>>>>>>> 7416cbea22 ([MIRROR] next set of spans (#9247))
 
 	var/list/Lines = list()
 
@@ -19,8 +23,12 @@
 			continue
 		var/entry = "\t[C.key]"
 		if(C.holder?.fakekey)
+<<<<<<< HEAD
 		/* Bastion of Endeavor Translation: Bastion of Endeavor TODO: Risky but we'll see
 			entry += " <i>(as [C.holder.fakekey])</i>"
+=======
+			entry += " " + span_italics("as [C.holder.fakekey])")
+>>>>>>> 7416cbea22 ([MIRROR] next set of spans (#9247))
 		entry += " - Playing as [C.mob.real_name]"
 		*/
 			entry += " <i>(как [C.holder.fakekey])</i>"
@@ -28,11 +36,15 @@
 		// End of Bastion of Endeavor Translation
 		switch(C.mob.stat)
 			if(UNCONSCIOUS)
+<<<<<<< HEAD
 				/* Bastion of Endeavor Translation
 				entry += " - [span_darkgray("<b>Unconscious</b>")]"
 				*/
 				entry += " - [span_darkgray("<b>Без сознания</b>")]"
 				// End of Bastion of Endeavor Translation
+=======
+				entry += " - [span_darkgray(span_bold("Unconscious"))]"
+>>>>>>> 7416cbea22 ([MIRROR] next set of spans (#9247))
 			if(DEAD)
 				if(isobserver(C.mob))
 					var/mob/observer/dead/O = C.mob
@@ -40,8 +52,9 @@
 					if(O.started_as_observer)
 						entry += " - [span_gray("Observing")]"
 					else
-						entry += " - [span_black("<b>DEAD</b>")]"
+						entry += " - [span_black(span_bold("DEAD"))]"
 				else
+<<<<<<< HEAD
 					entry += " - [span_black("<b>DEAD</b>")]"
 				*/
 					if(O.started_as_observer)
@@ -51,15 +64,18 @@
 				else
 					entry += " – [span_black("<b>[verb_ru(C.mob, ";Мёртв;Мертва;Мертво;Мертвы;", index_v = "real_name")]</b>")]"
 				// End of Bastion of Endeavor Translation
+=======
+					entry += " - [span_black(span_bold("DEAD"))]"
+>>>>>>> 7416cbea22 ([MIRROR] next set of spans (#9247))
 
 		if(C.player_age != initial(C.player_age) && isnum(C.player_age)) // database is on
 			var/age = C.player_age
 			/* Bastion of Endeavor Translation
 			switch(age)
 				if(0 to 1)
-					age = span_red("<b>[age] days old</b>")
+					age = span_red(span_bold("[age] days old"))
 				if(1 to 10)
-					age = span_orange("<b>[age] days old</b>")
+					age = span_orange(span_bold("[age] days old"))
 				else
 					entry += " - [age] days old"
 				*/
@@ -67,11 +83,15 @@
 			// End of Bastion of Endeavor Translation
 
 		if(is_special_character(C.mob))
+<<<<<<< HEAD
 			/* Bastion of Endeavor Translation
 			entry += " - [span_red("<b>Antagonist</b>")]"
 			*/
 			entry += " - [span_red("<b>Антагонист</b>")]"
 			// End of Bastion of Endeavor Translation
+=======
+			entry += " - [span_red(span_bold("Antagonist"))]"
+>>>>>>> 7416cbea22 ([MIRROR] next set of spans (#9247))
 
 		if(C.is_afk())
 			var/seconds = C.last_activity_seconds()
@@ -87,8 +107,12 @@
 	for(var/line in sortList(Lines))
 		msg += "[line]\n"
 
+<<<<<<< HEAD
 	/* Bastion of Endeavor Translation
 	msg += "<b>Total Players: [length(Lines)]</b>"
+=======
+	msg += span_bold("Total Players: [length(Lines)]")
+>>>>>>> 7416cbea22 ([MIRROR] next set of spans (#9247))
 	msg = span_filter_notice("[jointext(msg, "<br>")]")
 	*/
 	msg += "<b>Всего игроков: [length(Lines)]</b>"
@@ -139,11 +163,15 @@
 		// End of Bastion of Endeavor Translation
 		if(holder)
 			if(C.holder.fakekey)
+<<<<<<< HEAD
 				/* Bastion of Endeavor Translation
 				temp += " <i>(as [C.holder.fakekey])</i>"
 				*/
 				temp += " <i>(под именем [C.holder.fakekey])</i>"
 				// End of Bastion of Endeavor Translation
+=======
+				temp += " " + span_italics("(as [C.holder.fakekey])")
+>>>>>>> 7416cbea22 ([MIRROR] next set of spans (#9247))
 
 			/* Bastion of Endeavor Translation
 			if(isobserver(C.mob))
@@ -179,6 +207,7 @@
 			if(R_EVENT)
 				eventMmsg += temp
 
+<<<<<<< HEAD
 	/* Bastion of Endeavor Translation
 	msg = "<b>Current Admins ([num_admins_online]):</b>\n" + msg
 	*/
@@ -205,6 +234,18 @@
 		*/
 		msg += "\n<b> Прочий персонал ([num_event_managers_online]):</b>\n" + eventMmsg
 		// End of Bastion of Endeavor Translation
+=======
+	msg = span_bold("Current Admins ([num_admins_online]):") + "\n" + msg
+
+	if(CONFIG_GET(flag/show_mods)) // CHOMPEdit
+		msg += "\n" + span_bold(" Current Moderators ([num_mods_online]):") + "\n" + modmsg	//YW EDIT
+
+	if(CONFIG_GET(flag/show_devs)) // CHOMPEdit
+		msg += "\n" + span_bold(" Current Developers ([num_devs_online]):") + "\n" + devmsg
+
+	if(CONFIG_GET(flag/show_event_managers)) // CHOMPEdit
+		msg += "\n" + span_bold(" Current Miscellaneous ([num_event_managers_online]):") + "\n" + eventMmsg
+>>>>>>> 7416cbea22 ([MIRROR] next set of spans (#9247))
 
 	var/num_mentors_online = 0
 	var/mmsg = ""
@@ -243,6 +284,7 @@
 		mmsg += "\n"
 
 	if(CONFIG_GET(flag/show_mentors)) // CHOMPEdit
+<<<<<<< HEAD
 		/* Bastion of Endeavor Translation
 		msg += "\n<b> Current Mentors ([num_mentors_online]):</b>\n" + mmsg
 		*/
@@ -254,5 +296,10 @@
 	*/
 	msg += "\n<span class='info'>Запросы в Помощь администратора дублируются в Discord. Если в сети нет администраторов, вы можете все равно оставить запрос, и кто-то из администраторов может увидеть его в Discord и ответить при первой же возможности.</span>"
 	// End of Bastion of Endeavor Translation
+=======
+		msg += "\n" + span_bold(" Current Mentors ([num_mentors_online]):") + "\n" + mmsg
+
+	msg += "\n" + span_info("Adminhelps are also sent to Discord. If no admins are available in game try anyway and an admin on Discord may see it and respond.")
+>>>>>>> 7416cbea22 ([MIRROR] next set of spans (#9247))
 
 	to_chat(src,span_filter_notice("[jointext(msg, "<br>")]"))

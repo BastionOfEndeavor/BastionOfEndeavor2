@@ -148,11 +148,15 @@ var/global/list/security_printer_tickets = list()	//VOREStation Edit
 	//VOREStation Add End
 
 	if(LAZYLEN(valid_stats_list))
+<<<<<<< HEAD
 		/* Bastion of Endeavor Translation
 		to_world("<B>Shift trivia!</B>")
 		*/
 		to_world("<B>Интересные факты о смене!</B>")
 		// End of Bastion of Endeavor Translation
+=======
+		to_world(span_world("Shift trivia!"))
+>>>>>>> 7416cbea22 ([MIRROR] next set of spans (#9247))
 
 		for(var/body in valid_stats_list)
-			to_world("[body]")
+			to_world(span_filter_system("[body]"))

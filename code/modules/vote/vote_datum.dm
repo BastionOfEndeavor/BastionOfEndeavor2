@@ -126,11 +126,15 @@
             if(length(winning_options) == 1)
                 var/res = winning_options[1]
                 if(res in choices)
+<<<<<<< HEAD
                     /* Bastion of Endeavor Translation
                     to_chat(world, span_interface("<b><code>[res]</code> won the vote!</b>"))
                     */
                     to_chat(world, span_interface("<b>В голосовании победил вариант \"<code>[res]</code>!\"</b>"))
                     // End of Bastion of Endeavor Translation
+=======
+                    to_chat(world, span_interface(span_bold("<code>[res]</code> won the vote!")))
+>>>>>>> 7416cbea22 ([MIRROR] next set of spans (#9247))
                     return res
                 else
                     /* Bastion of Endeavor Translation
@@ -142,11 +146,15 @@
                     // End of Bastion of Endeavor Translation
                     return null
 
+<<<<<<< HEAD
             /* Bastion of Endeavor Translation
             to_chat(world, span_interface("<b>No clear winner. The vote did not pass.</b>"))
             */
             to_chat(world, span_interface("<b>Голосование завершилось без победителя.</b>"))
             // End of Bastion of Endeavor Translation
+=======
+            to_chat(world, span_interface(span_bold("No clear winner. The vote did not pass.")))
+>>>>>>> 7416cbea22 ([MIRROR] next set of spans (#9247))
             return null
 
         if(VOTE_RESULT_TYPE_SKEWED)
@@ -154,11 +162,15 @@
             if(maxvotes >= required_votes && length(winning_options) == 1)
                 var/res = winning_options[1]
                 if(res in choices)
+<<<<<<< HEAD
                     /* Bastion of Endeavor Translation
                     to_chat(world, span_interface("<b><code>[res]</code> won the vote with a 70% majority!</b>"))
                     */
                     to_chat(world, span_interface("<b>В голосовании победил вариант \"<code>[res]</code>\", собрав 70% и более голосов!</b>"))
                     // End of Bastion of Endeavor Translation
+=======
+                    to_chat(world, span_interface(span_bold("<code>[res]</code> won the vote with a 70% majority!")))
+>>>>>>> 7416cbea22 ([MIRROR] next set of spans (#9247))
                     return res
                 else
                     /* Bastion of Endeavor Translation
@@ -170,11 +182,15 @@
                     // End of Bastion of Endeavor Translation
                     return null
 
+<<<<<<< HEAD
             /* Bastion of Endeavor Translation
             to_chat(world, span_interface("<b>No option received 70% of the votes. The vote did not pass.</b>"))
             */
             to_chat(world, span_interface("<b>Ни один вариант ответа голосования не собрал 70% голосов. Голосование завершено.</b>"))
             // End of Bastion of Endeavor Translation
+=======
+            to_chat(world, span_interface(span_bold("No option received 70% of the votes. The vote did not pass.")))
+>>>>>>> 7416cbea22 ([MIRROR] next set of spans (#9247))
             return null
 
     return null

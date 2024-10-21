@@ -160,12 +160,16 @@ var/list/runechat_image_cache = list()
 	/* Bastion of Endeavor Unicode Edit
 	var/list/names = splittext(owner.name, " ")
 	for (var/word in names)
+<<<<<<< HEAD
 		text = replacetext(text, word, "<b>[word]</b>")
 	*/
 	var/list/names = splittext_char(owner.name, " ")
 	for (var/word in names)
 		text = replacetext_char(text, word, "<b>[word]</b>")
 	// End of Bastion of Endeavor Unicode Edit
+=======
+		text = replacetext(text, word, span_bold("[word]"))
+>>>>>>> 7416cbea22 ([MIRROR] next set of spans (#9247))
 
 	var/list/prefixes
 

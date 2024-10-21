@@ -59,11 +59,15 @@
 	/* Bastion of Endeavor Translation
 	. += "<br>"
 	. += " Egg Type: <a href='?src=\ref[src];vore_egg_type=1'>[pref.vore_egg_type]</a><br>"
+<<<<<<< HEAD
 	. += "<b>Autohiss Default Setting:</b> <a href='?src=\ref[src];autohiss=1'>[pref.autohiss]</a><br>" // VOREStation Add
 	*/
 	. += "<b>Вид откладываемого яйца:</b> <a href='?src=\ref[src];vore_egg_type=1'>[pref.vore_egg_type]</a><br>"
 	. += "<b>Режим авто-шипения по умолчанию:</b> <a href='?src=\ref[src];autohiss=1'>[pref.autohiss]</a><br>" // VOREStation Add
 	// End of Bastion of Endeavor Translation
+=======
+	. += span_bold("Autohiss Default Setting:") + " <a href='?src=\ref[src];autohiss=1'>[pref.autohiss]</a><br>" // VOREStation Add
+>>>>>>> 7416cbea22 ([MIRROR] next set of spans (#9247))
 
 /datum/category_item/player_setup_item/vore/egg/OnTopic(var/href, var/list/href_list, var/mob/user)
 	if(!CanUseTopic(user))

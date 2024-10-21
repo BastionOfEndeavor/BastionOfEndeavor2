@@ -654,9 +654,9 @@ var/world_topic_spam_protect_time = world.timeofday
 	var/s = ""
 
 	if (config && CONFIG_GET(string/servername)) // CHOMPEdit
-		s += "<b>[CONFIG_GET(string/servername)]</b> &#8212; " // CHOMPEdit
+		s += span_bold("[CONFIG_GET(string/servername)]") + " &#8212; " // CHOMPEdit
 
-	s += "<b>[station_name()]</b>";
+	s += span_bold("[station_name()]");
 	s += " ("
 	s += "<a href=\"https://\">" //Change this to wherever you want the hub to link to.
 //	s += "[game_version]"
@@ -674,11 +674,15 @@ var/world_topic_spam_protect_time = world.timeofday
 		if(master_mode)
 			features += master_mode
 	else
+<<<<<<< HEAD
 		/* Bastion of Endeavor Translation
 		features += "<b>STARTING</b>"
 		*/
 		features += "<b>НАЧИНАЕТСЯ</b>"
 		// End of Bastion of Endeavor Translation
+=======
+		features += span_bold("STARTING")
+>>>>>>> 7416cbea22 ([MIRROR] next set of spans (#9247))
 
 	if (!CONFIG_GET(flag/enter_allowed))
 		/* Bastion of Endeavor Translation

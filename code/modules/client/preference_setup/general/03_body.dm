@@ -753,6 +753,7 @@ var/global/list/valid_bloodtypes = list("A+", "A-", "B+", "B-", "AB+", "AB-", "O
 	. += "<br><a href='?src=\ref[src];toggle_animations=1'>[pref.animations_toggle ? "Stop animations" : "Show animations"]</a>"
 	. += "</td></tr></table>"
 
+<<<<<<< HEAD
 	. += "<b>Hair</b><br>"
 	*/
 	. += "</td><td><b>Предпросмотр</b><br>"
@@ -763,12 +764,15 @@ var/global/list/valid_bloodtypes = list("A+", "A-", "B+", "B-", "AB+", "AB-", "O
 	. += "</td></tr></table>"
 	. += "<b>Причёска</b><br>"
 	// End of Bastion of Endeavor Translation
+=======
+	. += span_bold("Hair") + "<br>"
+>>>>>>> 7416cbea22 ([MIRROR] next set of spans (#9247))
 	if(has_flag(mob_species, HAS_HAIR_COLOR))
 	/* Bastion of Endeavor Translation
 		. += "<a href='?src=\ref[src];hair_color=1'>Change Color</a> [color_square(pref.r_hair, pref.g_hair, pref.b_hair)] "
 	. += " Style: <a href='?src=\ref[src];hair_style_left=[pref.h_style]'><</a> <a href='?src=\ref[src];hair_style_right=[pref.h_style]''>></a> <a href='?src=\ref[src];hair_style=1'>[pref.h_style]</a><br>" //The <</a> & ></a> in this line is correct-- those extra characters are the arrows you click to switch between styles.
 
-	. += "<b>Gradient</b><br>"
+	. += span_bold("Gradient") + "<br>"
 	. += "<a href='?src=\ref[src];grad_color=1'>Change Color</a> [color_square(pref.r_grad, pref.g_grad, pref.b_grad)] "
 	. += " Style: <a href='?src=\ref[src];grad_style_left=[pref.grad_style]'><</a> <a href='?src=\ref[src];grad_style_right=[pref.grad_style]''>></a> <a href='?src=\ref[src];grad_style=1'>[pref.grad_style]</a><br>"
 
@@ -823,8 +827,12 @@ var/global/list/valid_bloodtypes = list("A+", "A-", "B+", "B-", "AB+", "AB-", "O
 
 	var/list/ear_styles = pref.get_available_styles(global.ear_styles_list)
 	var/datum/sprite_accessory/ears/ear = ear_styles[pref.ear_style]
+<<<<<<< HEAD
 	/* Bastion of Endeavor Translation
 	. += "<b>Ears</b><br>"
+=======
+	. += span_bold("Ears") + "<br>"
+>>>>>>> 7416cbea22 ([MIRROR] next set of spans (#9247))
 	if(istype(ear))
 		. += " Style: <a href='?src=\ref[src];ear_style=1'>[ear.name]</a><br>"
 		if(ear.do_colouration)
@@ -851,8 +859,12 @@ var/global/list/valid_bloodtypes = list("A+", "A-", "B+", "B-", "AB+", "AB-", "O
 
 	var/list/tail_styles = pref.get_available_styles(global.tail_styles_list)
 	var/datum/sprite_accessory/tail/tail = tail_styles[pref.tail_style]
+<<<<<<< HEAD
 	/* Bastion of Endeavor Translation
 	. += "<b>Tail</b><br>"
+=======
+	. += span_bold("Tail") + "<br>"
+>>>>>>> 7416cbea22 ([MIRROR] next set of spans (#9247))
 	if(istype(tail))
 		. += " Style: <a href='?src=\ref[src];tail_style=1'>[tail.name]</a><br>"
 		if(tail.do_colouration)
@@ -879,8 +891,12 @@ var/global/list/valid_bloodtypes = list("A+", "A-", "B+", "B-", "AB+", "AB-", "O
 
 	var/list/wing_styles = pref.get_available_styles(global.wing_styles_list)
 	var/datum/sprite_accessory/wing/wings = wing_styles[pref.wing_style]
+<<<<<<< HEAD
 	/* Bastion of Endeavor Translation: might as well just grab all of it
 	. += "<b>Wing</b><br>"
+=======
+	. += span_bold("Wing") + "<br>"
+>>>>>>> 7416cbea22 ([MIRROR] next set of spans (#9247))
 	if(istype(wings))
 		. += " Style: <a href='?src=\ref[src];wing_style=1'>[wings.name]</a><br>"
 		if(wings.do_colouration)
@@ -899,8 +915,8 @@ var/global/list/valid_bloodtypes = list("A+", "A-", "B+", "B-", "AB+", "AB-", "O
 
 	. += "</table>"
 	. += "<br>"
-	. += "<b>Allow Synth markings:</b> <a href='?src=\ref[src];synth_markings=1'><b>[pref.synth_markings ? "Yes" : "No"]</b></a><br>"
-	. += "<b>Allow Synth color:</b> <a href='?src=\ref[src];synth_color=1'><b>[pref.synth_color ? "Yes" : "No"]</b></a><br>"
+	. += span_bold("Allow Synth markings:") + " <a href='?src=\ref[src];synth_markings=1'><b>[pref.synth_markings ? "Yes" : "No"]</b></a><br>"
+	. += span_bold("Allow Synth color:") + " <a href='?src=\ref[src];synth_color=1'><b>[pref.synth_color ? "Yes" : "No"]</b></a><br>"
 	if(pref.synth_color)
 		. += "<a href='?src=\ref[src];synth2_color=1'>Change Color</a> [color_square(pref.r_synth, pref.g_synth, pref.b_synth)]"
 	*/
@@ -2039,8 +2055,12 @@ var/global/list/valid_bloodtypes = list("A+", "A-", "B+", "B-", "AB+", "AB-", "O
 		// Bastion of Endeavor TODO: Pay special attention to this when localizing species
 		user << browse_rsc(icon(current_species.icobase,"preview"), "species_preview_[current_species.name].png") //ChompEDIT usr -> user
 		dat += "<img src='species_preview_[current_species.name].png' width='64px' height='64px'><br/><br/>"
+<<<<<<< HEAD
 	/* Bastion of Endeavor Translation
 	dat += "<b>Language:</b> [current_species.species_language]<br/>"
+=======
+	dat += span_bold("Language:") + " [current_species.species_language]<br/>"
+>>>>>>> 7416cbea22 ([MIRROR] next set of spans (#9247))
 	dat += "<small>"
 	if(current_species.spawn_flags & SPECIES_CAN_JOIN)
 		switch(current_species.rarity_value)

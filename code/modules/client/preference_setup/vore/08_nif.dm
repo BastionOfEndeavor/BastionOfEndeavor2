@@ -65,8 +65,12 @@
 		new pref.nif_path(character, pref.nif_durability, pref.nif_savedata)
 
 /datum/category_item/player_setup_item/vore/nif/content(var/mob/user)
+<<<<<<< HEAD
 	/* Bastion of Endeavor Translation
 	. += "<b>NIF:</b> [ispath(pref.nif_path) ? "Present" : "None"]"
 	*/
 	. += "<b>НИФ:</b> [ispath(pref.nif_path) ? "Установлен" : "Отсутствует"]"
 	// End of Bastion of Endeavor Translation
+=======
+	. += span_bold("NIF:") + " [ispath(pref.nif_path) ? "Present" : "None"]"
+>>>>>>> 7416cbea22 ([MIRROR] next set of spans (#9247))

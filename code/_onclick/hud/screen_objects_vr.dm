@@ -10,24 +10,32 @@
 		// End of Bastion of Endeavor Translation
 			var/turf/T = get_turf(usr)
 			var/darkness = round(1 - T.get_lumcount(),0.1)
+<<<<<<< HEAD
 			/* Bastion of Endeavor Translation
 			to_chat(usr,span_notice("<b>Darkness:</b> [darkness]"))
 			*/
 			to_chat(usr,span_notice("<b>Тьма:</b> [darkness]"))
 			// End of Bastion of Endeavor Translation
 		/* Bastion of Endeavor Translation
+=======
+			to_chat(usr,span_notice(span_bold("Darkness:") + " [darkness]"))
+>>>>>>> 7416cbea22 ([MIRROR] next set of spans (#9247))
 		if("energy")
 		*/
 		if("Энергия")
 		// End of Bastion of Endeavor Translation
 			var/mob/living/simple_mob/shadekin/SK = usr
 			if(istype(SK))
+<<<<<<< HEAD
 				/* Bastion of Endeavor Translation
 				to_chat(usr,span_notice("<b>Energy:</b> [SK.energy] ([SK.dark_gains])"))
 				*/
 				to_chat(usr,span_notice("<b>Энергия:</b> [SK.energy] ([SK.dark_gains])"))
 				// End of Bastion of Endeavor Translation
 		/* Bastion of Endeavor Translation
+=======
+				to_chat(usr,span_notice(span_bold("Energy:") + " [SK.energy] ([SK.dark_gains])"))
+>>>>>>> 7416cbea22 ([MIRROR] next set of spans (#9247))
 		if("shadekin status")
 		*/
 		if("Состояние")
@@ -35,6 +43,7 @@
 			var/turf/T = get_turf(usr)
 			if(T)
 				var/darkness = round(1 - T.get_lumcount(),0.1)
+<<<<<<< HEAD
 				/* Bastion of Endeavor Translation
 				to_chat(usr,span_notice("<b>Darkness:</b> [darkness]"))
 				*/
@@ -48,18 +57,28 @@
 				to_chat(usr,span_notice("<b>Энергия:</b> [H.shadekin_get_energy(H)]"))
 				// End of Bastion of Endeavor Translation
 		/* Bastion of Endeavor Translation
+=======
+				to_chat(usr,span_notice(span_bold("Darkness:") + " [darkness]"))
+			var/mob/living/carbon/human/H = usr
+			if(istype(H) && istype(H.species, /datum/species/shadekin))
+				to_chat(usr,span_notice(span_bold("Energy:") + " [H.shadekin_get_energy(H)]"))
+>>>>>>> 7416cbea22 ([MIRROR] next set of spans (#9247))
 		if("glamour")
 		*/
 		if("Гламур")
 		// End of Bastion of Endeavor Translation
 			var/mob/living/carbon/human/H = usr
 			if(istype(H))
+<<<<<<< HEAD
 				/* Bastion of Endeavor Translation
 				to_chat(usr,span_notice("<b>Energy:</b> [H.species.lleill_energy]/[H.species.lleill_energy_max]"))
 				*/
 				to_chat(usr,span_notice("<b>Энергия:</b> [H.species.lleill_energy]/[H.species.lleill_energy_max]"))
 				// End of Bastion of Endeavor Translation
 		/* Bastion of Endeavor Translation
+=======
+				to_chat(usr,span_notice(span_bold("Energy:") + " [H.species.lleill_energy]/[H.species.lleill_energy_max]"))
+>>>>>>> 7416cbea22 ([MIRROR] next set of spans (#9247))
 		if("danger level")
 		*/
 		if("Уровень опасности")

@@ -53,11 +53,15 @@
 
 /* Bastion of Endeavor Edit: 
 /datum/category_item/player_setup_item/volume_sliders/volume/content(var/mob/user)
+<<<<<<< HEAD
 */
 /datum/category_item/player_setup_item/player_global/volume/content(var/mob/user)
 // End of Bastion of Endeavor Edit
 	/* Bastion of Endeavor Translation
 	. += "<b>Volume Settings</b><br>"
+=======
+	. += span_bold("Volume Settings") + "<br>"
+>>>>>>> 7416cbea22 ([MIRROR] next set of spans (#9247))
 	for(var/channel in pref.volume_channels)
 		. += "[channel]: <a href='?src=\ref[src];change_volume=[channel];'><b>[pref.volume_channels[channel] * 100]%</b></a><br>"
 	. += "<br>"

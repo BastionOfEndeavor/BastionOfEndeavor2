@@ -60,8 +60,12 @@
 	character.custom_link				= pref.custom_link
 
 /datum/category_item/player_setup_item/general/flavor/content(var/mob/user)
+<<<<<<< HEAD
 	/* Bastion of Endeavor Translation
 	. += "<b>Flavor:</b><br>"
+=======
+	. += span_bold("Flavor:") + "<br>"
+>>>>>>> 7416cbea22 ([MIRROR] next set of spans (#9247))
 	. += "<a href='?src=\ref[src];flavor_text=open'>Set Flavor Text</a><br/>"
 	. += "<a href='?src=\ref[src];flavour_text_robot=open'>Set Robot Flavor Text</a><br/>"
 	. += "<a href='?src=\ref[src];custom_link=1'>Set Custom Link</a><br/>"
@@ -125,11 +129,15 @@
 		// End of Bastion of Endeavor Translation
 		if(new_link && CanUseTopic(user)) //ChompEDIT - usr removal
 			if(length(new_link) > 100)
+<<<<<<< HEAD
 				/* Bastion of Endeavor Translation
 				to_chat(user, "<span class = 'warning'>Your entry is too long, it must be 100 characters or less.</span>") //ChompEDIT - usr removal
 				*/
 				to_chat(user, "<span class = 'warning'>Вы ввели слишком длинную ссылку. Длина не может превышать 100 символов.</span>")
 				// End of Bastion of Endeavor Translation
+=======
+				to_chat(user, span_warning("Your entry is too long, it must be 100 characters or less.")) //ChompEDIT - usr removal
+>>>>>>> 7416cbea22 ([MIRROR] next set of spans (#9247))
 				return
 			pref.custom_link = new_link
 			/* Bastion of Endeavor Translation
@@ -143,8 +151,12 @@
 /datum/category_item/player_setup_item/general/flavor/proc/SetFlavorText(mob/user)
 	var/HTML = "<body>"
 	HTML += "<tt><center>"
+<<<<<<< HEAD
 	/* Bastion of Endeavor Translation
 	HTML += "<b>Set Flavor Text</b> <hr />"
+=======
+	HTML += span_bold("Set Flavor Text") + " <hr />"
+>>>>>>> 7416cbea22 ([MIRROR] next set of spans (#9247))
 	HTML += "Note: This is not *literal* flavor of your character. This is visual description of what they look like. <hr />"
 	*/
 	HTML += "<meta charset='utf-8'>"
@@ -223,12 +235,16 @@
 /datum/category_item/player_setup_item/general/flavor/proc/SetFlavourTextRobot(mob/user)
 	var/HTML = "<body>"
 	HTML += "<tt><center>"
+<<<<<<< HEAD
 	/* Bastion of Endeavor Translation
 	HTML += "<b>Set Robot Flavour Text</b> <hr />"
 	*/
 	HTML += "<meta charset='utf-8'>"
 	HTML += "<b>Описание внешности робота</b> <hr />"
 	// End of Bastion of Endeavor Translation
+=======
+	HTML += span_bold("Set Robot Flavour Text") + " <hr />"
+>>>>>>> 7416cbea22 ([MIRROR] next set of spans (#9247))
 	HTML += "<br></center>"
 	/* Bastion of Endeavor Translation: Bastion of Endeavor TODO: Leaving the rest untranslated until borgs get localization
 	HTML += "<a href='?src=\ref[src];flavour_text_robot=Default'>Default:</a> "

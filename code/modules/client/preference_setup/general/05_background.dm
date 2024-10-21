@@ -52,8 +52,12 @@
 	character.religion			= pref.religion
 
 /datum/category_item/player_setup_item/general/background/content(var/mob/user)
+<<<<<<< HEAD
 	/* Bastion of Endeavor Translation: Bastion of Endeavor TODO: Job bans
 	. += "<b>Background Information</b><br>"
+=======
+	. += span_bold("Background Information") + "<br>"
+>>>>>>> 7416cbea22 ([MIRROR] next set of spans (#9247))
 	. += "Economic Status: <a href='?src=\ref[src];econ_status=1'>[pref.economic_status]</a><br/>"
 	. += "Home: <a href='?src=\ref[src];home_system=1'>[pref.home_system]</a><br/>"
 	. += "Birthplace: <a href='?src=\ref[src];birthplace=1'>[pref.birthplace]</a><br/>"
@@ -63,7 +67,7 @@
 
 	. += "<br/><b>Records</b>:<br/>"
 	if(jobban_isbanned(user, "Records"))
-		. += "<span class='danger'>You are banned from using character records.</span><br>"
+		. += span_danger("You are banned from using character records.") + "<br>"
 	else
 		. += "Medical Records:<br>"
 		. += "<a href='?src=\ref[src];set_medical_records=1'>[TextPreview(pref.med_record,40)]</a><br>"

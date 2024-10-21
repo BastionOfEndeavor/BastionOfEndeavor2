@@ -55,6 +55,7 @@
 
 /datum/category_item/player_setup_item/vore/misc/content(var/mob/user)
 	. += "<br>"
+<<<<<<< HEAD
 	/* Bastion of Endeavor Translation
 	. += "<b>Appear in Character Directory:</b> <a [pref.show_in_directory ? "class='linkOn'" : ""] href='?src=\ref[src];toggle_show_in_directory=1'><b>[pref.show_in_directory ? "Yes" : "No"]</b></a><br>"
 	. += "<b>Character Directory Vore Tag:</b> <a href='?src=\ref[src];directory_tag=1'><b>[pref.directory_tag]</b></a><br>"
@@ -81,6 +82,19 @@
 	. += "<b><a [pref.borg_petting ? "class='linkOn'" : ""] href='?src=\ref[src];toggle_borg_petting=1'><b>[pref.borg_petting ? "Допускать" : "Не допускать"]</b></a> поглаживания, будучи роботом</b><br>"
 	. += "<b><a [pref.stomach_vision ? "class='linkOn'" : ""] href='?src=\ref[src];toggle_stomach_vision=1'><b>[pref.stomach_vision ? "Отображать" : "Не отображать"]</b></a> животы персонажей</b><br>"
 	// End of Bastion of Endeavor Translation
+=======
+	. += span_bold("Appear in Character Directory:") + " <a [pref.show_in_directory ? "class='linkOn'" : ""] href='?src=\ref[src];toggle_show_in_directory=1'><b>[pref.show_in_directory ? "Yes" : "No"]</b></a><br>"
+	. += span_bold("Character Directory Vore Tag:") + " <a href='?src=\ref[src];directory_tag=1'><b>[pref.directory_tag]</b></a><br>"
+	. += span_bold("Character Directory Gender:") + " <a href='?src=\ref[src];directory_gendertag=1'><b>[pref.directory_gendertag]</b></a><br>" // CHOMPStation Edit: Character Directory Update
+	. += span_bold("Character Directory Sexuality:") + " <a href='?src=\ref[src];directory_sexualitytag=1'><b>[pref.directory_sexualitytag]</b></a><br>" // CHOMPStation Edit: Character Directory Update
+	. += span_bold("Character Directory ERP Tag:") + " <a href='?src=\ref[src];directory_erptag=1'><b>[pref.directory_erptag]</b></a><br>"
+	. += span_bold("Character Directory Advertisement:") + " <a href='?src=\ref[src];directory_ad=1'><b>Set Directory Ad</b></a><br>"
+	. += span_bold("Suit Sensors Preference:") + " <a [pref.sensorpref ? "" : ""] href='?src=\ref[src];toggle_sensor_setting=1'><b>[sensorpreflist[pref.sensorpref]]</b></a><br>"
+	. += span_bold("Capture Crystal Preference:") + " <a [pref.capture_crystal ? "class='linkOn'" : ""] href='?src=\ref[src];toggle_capture_crystal=1'><b>[pref.capture_crystal ? "Yes" : "No"]</b></a><br>"
+	. += span_bold("Spawn With Backup Implant:") + " <a [pref.auto_backup_implant ? "class='linkOn'" : ""] href='?src=\ref[src];toggle_implant=1'><b>[pref.auto_backup_implant ? "Yes" : "No"]</b></a><br>"
+	. += span_bold("Allow petting as robot:") + " <a [pref.borg_petting ? "class='linkOn'" : ""] href='?src=\ref[src];toggle_borg_petting=1'><b>[pref.borg_petting ? "Yes" : "No"]</b></a><br>"
+	. += span_bold("Enable Stomach Sprites:") + " <a [pref.stomach_vision ? "class='linkOn'" : ""] href='?src=\ref[src];toggle_stomach_vision=1'><b>[pref.stomach_vision ? "Yes" : "No"]</b></a><br>"
+>>>>>>> 7416cbea22 ([MIRROR] next set of spans (#9247))
 
 /datum/category_item/player_setup_item/vore/misc/OnTopic(var/href, var/list/href_list, var/mob/user)
 	if(href_list["toggle_show_in_directory"])
