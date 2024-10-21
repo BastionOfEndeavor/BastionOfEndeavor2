@@ -164,3 +164,6 @@ russian/_modular/*
 !russian/_modular/icons
 
 config/jobwhitelist.txt
+
+#ignore tracy dll
+prof.dll

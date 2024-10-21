@@ -1,4 +1,5 @@
 #define RECOMMENDED_VERSION 513
+<<<<<<< HEAD
 // CHOMPedit Start - Tracy
 /proc/prof_init()
 	var/lib
@@ -20,8 +21,9 @@
 	// End of Bastion of Endeavor Translation
 // CHOMPedit End
 
+=======
+>>>>>>> 21b3305c29 (Add bapi-dmm, a rust maploader that goes BRRRRRRR (#9201))
 /world/New()
-	//prof_init() // CHOMPedit - Uncomment to enable Tracy. Requires https://github.com/mafemergency/byond-tracy/
 	world_startup_time = world.timeofday
 	rollover_safety_date = world.realtime - world.timeofday // 00:00 today (ish, since floating point error with world.realtime) of today
 	/* Bastion of Endeavor Translation
