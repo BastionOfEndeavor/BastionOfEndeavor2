@@ -39,11 +39,35 @@ export const VorePanelEditToggle = (props: {
   const { editMode, toggleEditMode } = props;
 
   return (
+<<<<<<< HEAD
     <Button
       icon="pencil"
       color={editMode ? 'green' : undefined}
       tooltip={(editMode ? 'Dis' : 'En') + 'able edit mode'}
       onClick={() => toggleEditMode(!editMode)}
     />
+=======
+    <Stack>
+      <Stack.Item>
+        <Button
+          icon="pencil"
+          selected={editMode}
+          tooltip={(editMode ? 'Dis' : 'En') + 'able edit mode.'}
+          onClick={() => toggleEditMode(!editMode)}
+        />
+      </Stack.Item>
+      <Stack.Item>
+        <Button
+          icon={persistEditMode ? 'lock-open' : 'lock'}
+          selected={persistEditMode}
+          tooltip={
+            (persistEditMode ? 'Dis' : 'En') +
+            'able edit mode active on window opening.'
+          }
+          onClick={() => act('toggle_editmode_persistence')}
+        />
+      </Stack.Item>
+    </Stack>
+>>>>>>> 74d886613b ([MIRROR] Add Multishock integration (#11003))
   );
 };
