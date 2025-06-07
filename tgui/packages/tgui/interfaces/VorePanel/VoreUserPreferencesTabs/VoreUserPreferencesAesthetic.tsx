@@ -17,7 +17,7 @@ export const VoreUserPreferencesAesthetic = (props: {
   active_belly: string | null;
   our_bellies: bellyData[];
   belly_rub_target: string | null;
-  vore_sprite_color: Record<string, string>;
+  vore_sprite_color: Record<string, string | undefined>;
   vore_sprite_multiply: Record<string, BooleanLike>;
   vore_icon_options: string[];
   aestethicMessages: aestMessageData;
@@ -44,6 +44,10 @@ export const VoreUserPreferencesAesthetic = (props: {
 
   const capitalizedName = active_belly && capitalize(active_belly);
 
+  const possibleIconOptions = vore_icon_options.filter(
+    (entry) => !!vore_sprite_color[entry],
+  );
+
   return (
     <Section
       fill
@@ -61,7 +65,7 @@ export const VoreUserPreferencesAesthetic = (props: {
           <Stack>
             <Stack.Item basis="49%" grow>
               <LabeledList>
-                {vore_icon_options.map((entry) => (
+                {possibleIconOptions.map((entry) => (
                   <LabeledList.Item key={entry} label={capitalize(entry)}>
                     <Stack align="center">
                       <VorePanelEditColor
@@ -70,7 +74,7 @@ export const VoreUserPreferencesAesthetic = (props: {
                         editMode={editMode}
                         action="set_vs_color"
                         subAction={entry}
-                        back_color={vore_sprite_color[entry]}
+                        back_color={vore_sprite_color[entry] || ''}
                         tooltip={
                           "Modify the sprite color of your '" +
                           entry +
